@@ -1,0 +1,5 @@
+<div class="list">
+  <div class="list-cards">
+    <app-card *ngFor="let card of cards" [Card]="card" routerLink="play/{{card.id}}"></app-card>
+  </div>
+</div>
