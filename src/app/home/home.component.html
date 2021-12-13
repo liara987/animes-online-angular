@@ -1,0 +1,24 @@
+<div class="home">
+  <div class="highlight">
+    <div class="section-title">Destaques</div>
+    <div class="highlight-cards">
+      <app-card
+        *ngFor="let card of highlight"
+        [Card]="card"
+        routerLink="/play/{{ card.id }}"
+      ></app-card>
+    </div>
+  </div>
+
+  <div class="released">
+    <div class="section-title">Lançamentos</div>
+    <div class="released-cards">
+      <app-card
+        *ngFor="let card of cards"
+        [Card]="card"
+        routerLink="/play/{{ card.id }}"
+      >
+      </app-card>
+    </div>
+  </div>
+</div>
