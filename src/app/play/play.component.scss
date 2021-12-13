@@ -1,0 +1,11 @@
+.play {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1155px;
+
+  &-episodes {
+    margin-top: 50px;
+  }
+}
