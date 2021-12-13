@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 90px;
+  font-family: Roboto;
+  font-weight: 400;
+  border-top: solid 5px #dd0000;
+  position: relative;
+
+  &-social-media {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    position: absolute;
+    left: 30px;
+  }
+
+  &-link {
+    font-size: 18px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &-icon {
+    margin-right: 10px;
+  }
+
+  &-attention {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+}
