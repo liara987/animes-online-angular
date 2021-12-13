@@ -1,0 +1,45 @@
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 80px 0px;
+  height: 48px;
+  position: relative;
+
+  &-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &-link {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    margin-right: 50px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover:not(.logo) {
+      border-bottom: 1px solid #dd0000;
+      box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
+    }
+  }
+
+  &-title,
+  &-subtitle {
+    margin: 0;
+    font-family: "Aubrey", cursive;
+  }
+
+  &-title {
+    font-size: 48px;
+  }
+
+  &-subtitle {
+    font-size: 18px;
+    margin: 42px 0 0 30px;
+  }
+}
