@@ -1,0 +1,13 @@
+.episodes {
+  border-top: red solid 5px;
+  margin-top: 50px;
+  &-cards {
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, 350px);
+    grid-auto-rows: 300px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
+}
+

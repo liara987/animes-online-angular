@@ -1,0 +1,11 @@
+<div class="episodes">
+  <div class="episodes-cards">
+    <app-card
+      (ngModel)="card.episode"
+      (click)="onEpisodeChange(card.videoUrl)"
+      *ngFor="let card of cards"
+      [Card]="card"
+      routerLink="/play/{{ card.id }}"
+    ></app-card>
+  </div>
+</div>
