@@ -1,0 +1,21 @@
+.unfilled,
+.filled {
+  width: 123px;
+  height: 38px;
+  background: #dd0000;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  color: #fcfcfc;
+  transition: all 0.3s ease;
+  &.unfilled {
+    background-color: transparent;
+    border: solid 2px #dd0000;
+  }
+  
+  &:hover {
+    background: rgb(189 5 5 / 90%);
+  }
+}
