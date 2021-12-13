@@ -1,0 +1,33 @@
+.details{
+    width: 100%;
+    height: auto;
+    border-top: solid red 5px;
+    display: flex;
+    margin-bottom: 50px;
+
+    &-main{ 
+        width: 950px;       
+        margin: 20px;
+    }
+
+    &-title{
+        font-size: 30px;
+        margin: 0 0 20px;
+    }
+
+    &-label{
+        color: #949494;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &-sinopse,
+    &-category{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    &-image{
+        width: 300px;
+    }
+}
