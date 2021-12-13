@@ -1,0 +1,22 @@
+<div class="card" [ngStyle]="{ width: Card.width, height: Card.height }">
+  <app-button
+    class="card-quality"
+    *ngIf="Card.quality"
+    [Button]="{ type: 'filled', value: Card.quality }"
+  ></app-button>
+  <app-button
+    class="card-subtitle"
+    *ngIf="Card.subtitle"
+    [Button]="{ type: 'filled', value: Card.subtitle }"
+  ></app-button>
+  <img
+    class="card-image"
+    src="{{ Card.image }}"
+    alt="Imagem de {{ Card.title }}"
+  />
+  <div class="card-info">
+    <p class="card-title">
+      {{ Card.title }} {{ !Card.movie && Card.episode ? "Episódio " + Card.episode : "" }}
+    </p>
+  </div>
+</div>

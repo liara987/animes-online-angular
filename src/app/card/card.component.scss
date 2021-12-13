@@ -1,0 +1,61 @@
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 4px 8px rgba(255, 254, 254, 0.2);
+    top: -4px;
+    border: 1px solid #dd0000;
+    border-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+    background-color: red;
+  }
+
+  &-quality,
+  &-subtitle,
+  &-info {
+    position: absolute;
+  }
+
+  &-title {
+    margin-left: 20px;
+  }
+
+  &-quality {
+    left: 20px;
+    top: 30px;
+  }
+
+  &-subtitle {
+    right: 20px;
+    top: 30px;
+  }
+
+  &-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(180deg, rgba(7, 7, 7, 0) 0%, #070707 100%);
+    border-radius: 0 0 20px 20px;
+    font-weight: 500;
+  }
+
+  &-title {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
+  }
+}
