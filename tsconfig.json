@@ -11,11 +11,14 @@
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2017",
-    "module": "es2020",
+    "module": "esnext",
     "lib": [
       "es2018",
       "dom"
