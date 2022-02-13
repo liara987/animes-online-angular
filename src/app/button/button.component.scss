@@ -1,21 +1,24 @@
+@import "../variables.scss";
+
 .unfilled,
 .filled {
-  width: 123px;
-  height: 38px;
-  background: #dd0000;
+  width: 100px;
+  height: 25px;
   border-radius: 5px;
   border: none;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
   letter-spacing: 0.05em;
-  color: #fcfcfc;
-  transition: all 0.3s ease;
+  color: $white;
+  background: $primary;
+
   &.unfilled {
     background-color: transparent;
-    border: solid 2px #dd0000;
+    border: solid 2px $primary;
   }
-  
-  &:hover {
-    background: rgb(189 5 5 / 90%);
+
+  @media (min-width: $sm) {
+    width: 115px;
+    height: 35px;
+    font-size: 18px;
   }
 }
