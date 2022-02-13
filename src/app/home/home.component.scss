@@ -1,54 +1,84 @@
+@import '../variables.scss';
+
 .home {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  width: fit-content;
 
   .section-title {
     align-self: flex-start;
     font-size: 30px;
     margin-bottom: 20px;
     border-bottom: 4px solid #dd0000;
-    width: 100%;
-  }
-
-  .released {
-    margin-top: 50px;
+    width: 100%;    
   }
 
   .highlight {
     &-cards {
       display: grid;
-      grid-template-columns: repeat(8, 162px);
-      grid-template-rows: repeat(4, 185px);
-      grid-gap: 15px;
-      width: 1225px;
-      height: 800px;
-
-      & app-card:nth-child(1) {
-        grid-column: span 3;
-        grid-row: span 4;
-      }
+      grid-template-columns: repeat(1, auto);
+      grid-gap: 10px;
+      justify-items: center;
 
       & app-card {
-        grid-column: span 2;
-        grid-row: span 2;
+        grid-column: span 1;
+        grid-row: span 1;
       }
     }
   }
 
-  .released {
+  .released {    
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     &-cards {
       display: inline-grid;
-      grid-template-columns: repeat(2, 600px);
-      grid-gap: 25px;
+      grid-template-columns: repeat(1, 300px);
+      grid-template-rows: repeat(1, auto);
+      grid-gap: 15px;
+    }
+  }
+
+  @media (min-width: $sm) {
+    .highlight {
+      width: 100%;
+      &-cards {
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-gap: 15px;
+        justify-content: center;
+    
+
+        & app-card:nth-child(1) {
+          grid-column: span 3;
+          grid-row: span 2;
+        }
+
+        & app-card {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+      }
     }
 
-    app-button {
-      margin-top: 30px;
+    .released {
+      margin-top: 50px;
+      width: 100%;
+      &-cards {
+        grid-template-columns: repeat(3, 350px);
+        grid-gap: 25px;
+      }
+    }
+  }
+
+  @media (max-width: $lg ) and (min-width: $sm) {    
+    .released {
+      &-cards {
+        grid-template-columns: repeat(2, 350px);        
+      }
     }
   }
 }
