@@ -36,9 +36,9 @@
 
     &-cards {
       display: inline-grid;
-      grid-template-columns: repeat(1, 300px);
+      grid-template-columns: repeat(1, 320px);
       grid-template-rows: repeat(1, auto);
-      grid-gap: 15px;
+      grid-gap: 20px;
     }
   }
 
