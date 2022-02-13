@@ -1,10 +1,25 @@
+@import '../variables.scss';
+
 .list {
-  height: 100vh;
+  height: 100%;
   
-  &-cards {
+  &-cards {    
     display: grid;
-    grid-template-columns: repeat(5, 250px);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(2, auto);
+    gap: 15px;
+  }
+
+  @media (min-width: $sm) {
+    &-cards{
+      grid-template-columns: repeat(4, 200px);
+      gap: 30px;
+    }
+  }
+
+  @media (min-width: $md) and (max-width: $lg){
+    &-cards{
+      grid-template-columns: repeat(3, 200px);
+      gap: 30px;
+    }
   }
 }
