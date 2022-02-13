@@ -82,8 +82,8 @@ export class HomeComponent implements OnInit {
         height: '550px'
       },
       others: {
-        width: '150px',
-        height: '150px'
+        width: this.isMobile() ? '150' : '250px',
+        height: this.isMobile() ? '150' : '250px'
       }
     }
 
