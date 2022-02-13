@@ -1,29 +1,36 @@
+@import '../variables.scss';
+
 .nav-bar {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin: 50px 80px 0px;
-  height: 48px;
   position: relative;
+  margin: 15px 15px 30px;
 
   &-logo {
+    margin-right: 5px;
+    height: 100%;
+  }
+  
+  &-home{
+    display: flex;
+    align-items: flex-start;
     position: absolute;
     left: 0;
     top: 0;
   }
 
   &-link {
-    font-size: 24px;
+    font-size: 14px;
     letter-spacing: 0.05em;
-    margin-right: 50px;
-    cursor: pointer;
+    margin-right: 15px;
 
     &:last-child {
       margin-right: 0;
     }
 
     &:hover:not(.logo) {
-      border-bottom: 1px solid #dd0000;
+      border-bottom: 1px solid $primary;
       box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
     }
   }
@@ -35,11 +42,43 @@
   }
 
   &-title {
-    font-size: 48px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
   }
 
   &-subtitle {
-    font-size: 18px;
-    margin: 42px 0 0 30px;
+    font-size: 10px;    
+  }
+
+  @media (min-width: $sm) {
+    justify-content: center;
+    margin: 30px;
+    height: 48px;
+
+    &-logo {
+      margin-right: 10px;
+      width: 32px;
+    }
+
+    &-link {
+      font-size: 24px;
+      letter-spacing: 0.05em;
+      margin-right: 30px;
+      cursor: pointer;
+
+      &:hover:not(.logo) {
+        border-bottom: 1px solid $primary;
+        box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-subtitle {
+      font-size: 10px;
+    }
   }
 }
