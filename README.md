@@ -1,8 +1,10 @@
+<link rel="stylesheet" type="text/css" media="all" href="README.css" />
+
 # <img src="https://animes-online-angular.vercel.app/assets/icons/logo.svg"> AnimeOnline
 
 ## Pra ver a versão mais atualizada em produção é só clicar [aqui](https://animes-online-angular.vercel.app/home)
 Oi, esse projetinho eu fiz porque tava entediada e queria programar algo, quero adicionar muito mais coisas nele, e se você puder colaborar eu agradeço 😘. O intuito desse projeto é melhorar minhas habilidades programando e evoluir, então sugestões de melhoras são sempre bem vidas 😉. Lembrando que esse site não foi feito pra piratear animes, e sim praticar programação, então coloquei somente alguns episódios dos meus animes favoritos.
-
+<link rel="stylesheet" type="text/css" media="all" href="README.css" />
 
 ### Recursos usados
 
@@ -44,19 +46,3 @@ ng serve
 
 <img class="social" src="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icone-do-instagram-colorido.png"> [Instagram](https://www.instagram.com/liaraprogramadora)
 </div>
-
-<style>
-.avatar{
-    border-radius: 50%;
-    width: 150px;
-}
-.about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.social {
-    width: 32px;
-}
-</style>
