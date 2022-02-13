@@ -1,12 +1,15 @@
 <div class="play">
   <app-details [data]="detail"></app-details>
-  <iframe
-    [src]="videoUrl | safeUrl"
-    width="1300"
-    height="700"
-    frameborder="0"
-    allowfullscreen
-    class="play-video"
-  ></iframe>
-  <app-episodes (changeEpisode)="newEpisode($event)" class="play-episodes"></app-episodes>
+  <div class="video">
+    <iframe
+      [src]="videoUrl | safeUrl"
+      frameborder="0"
+      allowfullscreen
+      class="play-video"
+    ></iframe>
+  </div>
+  <app-episodes
+    (changeEpisode)="newEpisode($event)"
+    class="play-episodes"
+  ></app-episodes>
 </div>
