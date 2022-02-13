@@ -1,18 +1,20 @@
+@import '../variables.scss';
+
 .card {
   position: relative;
   height: 100%;
   width: 100%;
   transition: all 0.2s ease-in-out;
 
-  &:hover {
+  &:hover, &:active {
     transform: scale(1.1);
     box-shadow: 5px 4px 8px rgba(255, 254, 254, 0.2);
     top: -4px;
-    border: 1px solid #dd0000;
+    border: 1px solid $primary;
     border-radius: 20px;
     z-index: 1;
     cursor: pointer;
-    background-color: red;
+    background-color: $primary;
   }
 
   &-quality,
@@ -43,7 +45,7 @@
 
   &-info {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -52,8 +54,9 @@
     border-radius: 0 0 20px 20px;
     font-weight: 500;
   }
-
+  
   &-title {
+    margin-bottom: 10px;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.05em;
