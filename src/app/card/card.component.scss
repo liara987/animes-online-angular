@@ -57,8 +57,14 @@
   
   &-title {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 23px;
     letter-spacing: 0.05em;
+  }
+
+  @media (min-width: $sm) {
+    &-title{
+      font-size: 20px;
+    }
   }
 }

@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" media="all" href="README.css" />
-
 # <img src="https://animes-online-angular.vercel.app/assets/icons/logo.svg"> AnimeOnline
 
 ## Pra ver a versão mais atualizada em produção é só clicar [aqui](https://animes-online-angular.vercel.app/home)
@@ -33,16 +31,15 @@ ng serve
 ```
 <br/>
 
-<div class="about">
+
 <h1>Liara Programadora</h1>
 
-<img class="avatar" src="https://i.imgur.com/xbEfigR.jpg#liara" alt="Avatar">
+<img width = 150px style="border-radius: 50%;" src="https://i.imgur.com/xbEfigR.jpg#liara" alt="Avatar">
 
 <br/>
 
-<img class="social" src="https://cdn.iconscout.com/icon/free/png-256/linkedin-208-916919.png"> [Linkedin](https://www.linkedin.com/in/liara-programadora/)
+<img width = 32px src="https://cdn.iconscout.com/icon/free/png-256/linkedin-208-916919.png"> [Linkedin](https://www.linkedin.com/in/liara-programadora/)
 
-<img class="social" src="https://images.vexels.com/media/users/3/137425/isolated/lists/f2ea1ded4d037633f687ee389a571086-logotipo-do-icone-do-youtube.png"> [Youtube](https://tinyurl.com/liara-programadora)
+<img width = 32px src="https://images.vexels.com/media/users/3/137425/isolated/lists/f2ea1ded4d037633f687ee389a571086-logotipo-do-icone-do-youtube.png"> [Youtube](https://tinyurl.com/liara-programadora)
 
-<img class="social" src="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icone-do-instagram-colorido.png"> [Instagram](https://www.instagram.com/liaraprogramadora)
-</div>
+<img width = 32px src="https://images.vexels.com/media/users/3/137198/isolated/lists/07f0d7b69ef071571e4ada2f4d6a053a-icone-do-instagram-colorido.png"> [Instagram](https://www.instagram.com/liaraprogramadora)
