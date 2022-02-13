@@ -1,33 +1,49 @@
-.details{
-    width: 100%;
-    height: auto;
-    border-top: solid red 5px;
-    display: flex;
-    margin-bottom: 50px;
+@import "../variables.scss";
 
-    &-main{ 
-        width: 950px;       
-        margin: 20px;
-    }
+.details {
+  border-top: solid $primary 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  width: 100vw;
 
-    &-title{
-        font-size: 30px;
-        margin: 0 0 20px;
-    }
+  &-main {
+    margin: 0 20px;
+    height: 100%;
+  }
 
-    &-label{
-        color: #949494;
-        font-weight: 500;
-        font-size: 20px;
-    }
+  &-title {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0;
+  }
 
-    &-sinopse,
-    &-category{
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
+  &-label {
+    color: #949494;
+    font-weight: 500;
+    font-size: 20px;
+  }
 
-    &-image{
-        width: 300px;
+  &-sinopse {
+    font-size: 18px;
+  }
+
+  &-category {
+    margin-bottom: 20px;
+  }
+
+  &-image {
+    width: 300px;
+  }
+
+  @media (min-width: $sm) {
+    max-width: 1155px;
+    height: 430px;
+    flex-direction: row;
+    
+    &-title {
+      text-align: left;
     }
+  }
 }
