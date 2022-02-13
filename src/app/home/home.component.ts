@@ -82,8 +82,8 @@ export class HomeComponent implements OnInit {
         height: '550px'
       },
       others: {
-        width: '250px',
-        height: '250px'
+        width: '150px',
+        height: '150px'
       }
     }
 
