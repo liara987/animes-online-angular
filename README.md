@@ -3,8 +3,9 @@ O AnimeOnline é uma página que lista animes e episódios e permite assistir os
 
 Esse projeto eu criei com o intuito de colocar em prática os meus conhecimentos. Por esse motivo não back-end ainda, os dados estão em um arquivo json. Eu usei Angular no front-end com Sass e Typescript que é padrão do Angular, fiz alguns testes unitários usado Jasmine e Karma o default do Angular. Usei rotas também para navegar entre as páginas que estão todas responsiva. 
 
-#### 🖌️ Veja o layout de referência [aqui](https://www.figma.com/file/GXh3IYv94teEHU8aNHds2s/Animes-Online-(Community)?node-id=0%3A1)
-#### 🚀 Veja a aplicação rodando [aqui](https://animes-online-angular.vercel.app/home)
+🖌️ **Veja o layout de referência [aqui](https://www.figma.com/file/GXh3IYv94teEHU8aNHds2s/Animes-Online-(Community)?node-id=0%3A1)**
+
+🚀 **Veja a aplicação rodando [aqui](https://animes-online-angular.vercel.app/home)**
 
 ## 🛠️ Tecnologias usadas
 - [Sass](https://sass-lang.com/) (Estilo)
