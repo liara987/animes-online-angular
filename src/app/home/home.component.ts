@@ -16,18 +16,13 @@ export class HomeComponent implements OnInit {
   cards: CardType[] = [];
   highlight: CardType[] = [];
 
-  public screenWidth: any;
-  public screenHeight: any;
-
   ngOnInit(): void {
-    this.getScreenSize()
     this.changeCardSizes()
     this.setCards()
   }
 
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
-    this.getScreenSize()
     this.changeCardSizes()
     this.setCards()
   }
@@ -55,24 +50,18 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  getScreenSize() {
-    this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
+  getInnerWidth() {
+    return window.innerWidth;
   }
 
   isMobile(): boolean {
     const mobileLarge = 425
-    return this.screenWidth <= mobileLarge
+    return this.getInnerWidth() <= mobileLarge
   }
 
   isTablet(): boolean {
     const tablet = 768;
-    return this.screenWidth <= tablet && !this.isMobile()
-  }
-
-  isDesktop(): boolean {
-    const desktop = 1440;
-    return this.screenWidth > desktop
+    return this.getInnerWidth() <= tablet && !this.isMobile()
   }
 
   changeCardSizes() {
