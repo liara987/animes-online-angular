@@ -32,8 +32,7 @@
     margin-top: 25px;
     display: flex;
     flex-direction: column;
-    
-
+    width: 100%;
     &-cards {
       display: inline-grid;
       grid-template-columns: repeat(1, 320px);
