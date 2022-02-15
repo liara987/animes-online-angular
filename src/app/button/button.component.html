@@ -1,6 +1,6 @@
 <input
   type="button"
-  class="{{ Button.type }}"
+  class="{{ Button.type ?? 'filled' }}"
   value="{{ Button.value }}"
   [ngStyle]="{
     width: Button.width,

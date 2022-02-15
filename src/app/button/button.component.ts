@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 export interface ButtonType {
-  type: string;
+  type?: string;
   value: string;
   width?: string;
   height?: string;
