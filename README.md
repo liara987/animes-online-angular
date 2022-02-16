@@ -16,8 +16,7 @@ Esse projeto eu criei com o intuito de colocar em prática os meus conhecimentos
 - [Vercel](https://vercel.com/) (Deploy)
 
 ## 👣 Proximos passos
-- [ ] Cobrir com testes todas as funções de todos os componentes
-- [ ] Documentar os componentes com [Storybook](https://storybook.js.org/)
+- [ ] Criar testes unitários para todas as funcionalidades dos componentes
 
 <div align="center">
 
