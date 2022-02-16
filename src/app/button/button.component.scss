@@ -1,6 +1,5 @@
 @import "../variables.scss";
 
-.unfilled,
 .filled {
   width: 100px;
   height: 25px;
@@ -10,11 +9,6 @@
   letter-spacing: 0.05em;
   color: $white;
   background: $primary;
-
-  &.unfilled {
-    background-color: transparent;
-    border: solid 2px $primary;
-  }
 
   @media (min-width: $sm) {
     width: 115px;

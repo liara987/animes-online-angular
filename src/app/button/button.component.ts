@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
 
 export interface ButtonType {
-  type?: string;
-  value: string;
-  width?: string;
-  height?: string;
-  fontSize?: string;
+  value: string;  
+  width?: number;
+  height?: number;
+  fontSize?: number;
 }
 
 @Component({
