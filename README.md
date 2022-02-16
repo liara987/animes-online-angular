@@ -18,8 +18,6 @@ Esse projeto eu criei com o intuito de colocar em prática os meus conhecimentos
 ## 👣 Proximos passos
 - [ ] Cobrir com testes todas as funções de todos os componentes
 - [ ] Documentar os componentes com [Storybook](https://storybook.js.org/)
-- [ ] Criar o back-end em [Node](https://nodejs.org/en/)
-- [ ] Adicionar um banco de dados
 
 <div align="center">
 
