@@ -3,10 +3,10 @@ import { Component, Input } from '@angular/core';
 export interface CardType {
   id: number;
   title: string;
-  image: string;
+  cover: string;
   video?: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
   description?: string;
   episode?: number;
   quality?: string;
