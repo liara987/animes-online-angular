@@ -1,6 +1,7 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
-import {SafeUrlPipe} from '../safe-url.pipe'
+import { SafeUrlPipe } from '../safe-url.pipe'
 
 import { PlayComponent } from './play.component';
 
@@ -28,7 +29,8 @@ describe('PlayComponent', () => {
           provide: ActivatedRoute,
           useValue: activatedRouteSpy
         }
-      ]
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   });
