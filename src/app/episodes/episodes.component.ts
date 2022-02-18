@@ -11,31 +11,40 @@ import animes from '../animes.json';
 export class EpisodesComponent implements OnInit {
   @Output() changeEpisode = new EventEmitter<string>();
   cards: CardType[] = [];
+  id!: number;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.setEpisodeById(Number(this.route.snapshot.paramMap.get('id')))
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.setEpisodes();
   }
 
-  setEpisodeById(id: number) {
-    animes.forEach((anime) => {
-      if (anime.id === id) {
-        anime.episodes.forEach((episode) => {
-          this.cards.push({
-            id,
-            title: anime.title,
-            image: episode.image,
-            episode: episode.number,
-            videoUrl: episode.url,
-            movie: anime.movie,
-          });
+  setEpisodes() {
+    const anime = this.findAnimeById(this.id);
+
+    anime.episodes
+      .map((ep: any) => {
+        this.cards.push({
+          id: anime.id,
+          title: anime.title,
+          cover: ep.image,
+          episode: ep.number,
+          videoUrl: ep.url,
+          movie: anime.movie,
         });
-      }
-    });
+      })
   }
 
   onEpisodeChange(url?: string) {
     this.changeEpisode.emit(url);
+  }
+
+  findAnimeById(id: number) {
+    return animes
+      .filter((anime => anime.id === id))
+      .reduce((obj: any, item: CardType) => Object.assign(obj, {
+        ...item
+      }), {})
   }
 }
