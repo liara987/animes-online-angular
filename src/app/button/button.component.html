@@ -1,7 +1,8 @@
 <input
+  *ngIf="Button.value"  
   type="button"
   class="filled"
-  value="{{ Button.value || '' }}"
+  value="{{ Button.value }}"
   [ngStyle]="{
     width: Button?.width + 'px',
     height: Button?.height + 'px',
