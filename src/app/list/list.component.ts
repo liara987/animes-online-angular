@@ -19,7 +19,7 @@ export class ListComponent implements OnInit {
       this.cards[i] = {
         id: anime.id,
         title: anime.title,
-        image: anime.cover,
+        cover: anime.cover,
       };
     });
   }
