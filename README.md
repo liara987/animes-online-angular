@@ -15,9 +15,6 @@ Esse projeto eu criei com o intuito de colocar em prática os meus conhecimentos
 - [Figma](https://www.figma.com/) (Layout)
 - [Vercel](https://vercel.com/) (Deploy)
 
-## 👣 Proximos passos
-- [ ] Criar testes unitários para todas as funcionalidades dos componentes
-
 <div align="center">
 
   ## Liara Programadora
