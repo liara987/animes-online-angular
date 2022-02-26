@@ -2,16 +2,43 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { CardType } from '../card/card.component';
 import animes from '../animes.json';
 
+interface SizeType {
+  firstItem: {
+    width: number,
+    height: number,
+  },
+  others: {
+    width: number,
+    height: number,
+  }
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  FIRST_ITEM_WIDTH: string | undefined;
-  FIRST_ITEM_HEIGHT: string | undefined;
-  OTHERS_WIDTH: string | undefined;
-  OTHERS_HEIGHT: string | undefined;
+  tabletSize: SizeType = {
+    firstItem: {
+      width: 300,
+      height: 400
+    },
+    others: {
+      width: 200,
+      height: 200
+    }
+  }
+
+  sizes: SizeType = {
+    firstItem: {
+      width: 450,
+      height: 550
+    },
+    others: {
+      width: 250,
+      height: 250
+    }
+  };
 
   cards: CardType[] = [];
   highlight: CardType[] = [];
@@ -32,17 +59,17 @@ export class HomeComponent implements OnInit {
       this.highlight[i] = {
         id: anime.id,
         title: anime.title,
-        image: anime.cover,
+        cover: anime.cover,
         movie: anime.movie,
-        width: i === 0 && !this.isMobile() ? this.FIRST_ITEM_WIDTH : this.OTHERS_WIDTH,
-        height: i === 0 && !this.isMobile() ? this.FIRST_ITEM_HEIGHT : this.OTHERS_HEIGHT
+        width: i === 0 && !this.isMobile() ? this.sizes.firstItem.width : this.sizes.others.width,
+        height: i === 0 && !this.isMobile() ? this.sizes.firstItem.height : this.sizes.others.height
       };
 
       this.cards[i] = {
         id: anime.id,
         title: anime.title,
         episode: anime.episodes[0].number,
-        image: anime.episodes[0].image,
+        cover: anime.episodes[0].image,
         quality: anime.episodes[0].quality,
         subtitle: anime.episodes[0].subtitle,
         movie: anime.movie,
@@ -65,31 +92,18 @@ export class HomeComponent implements OnInit {
   }
 
   changeCardSizes() {
-    const defaultSize = {
-      firstItem: {
-        width: '450px',
-        height: '550px'
-      },
-      others: {
-        width: this.isMobile() ? '150' : '250px',
-        height: this.isMobile() ? '150' : '250px'
+    if (this.isTablet()) {
+      this.sizes = {
+        ...this.tabletSize
+      }
+    } else if (this.isMobile()) {
+      this.sizes = {
+        ...this.sizes,
+        others: {
+          width: 150,
+          height: 150
+        }
       }
     }
-
-    const tabletSize = {
-      firstItem: {
-        width: '300px',
-        height: '400px'
-      },
-      others: {
-        width: '200px',
-        height: '200px'
-      }
-    }
-
-    this.FIRST_ITEM_WIDTH = this.isTablet() ? tabletSize.firstItem.width : defaultSize.firstItem.width;
-    this.FIRST_ITEM_HEIGHT = this.isTablet() ? tabletSize.firstItem.height : defaultSize.firstItem.height;
-    this.OTHERS_WIDTH = this.isTablet() ? tabletSize.others.width : defaultSize.others.width;
-    this.OTHERS_HEIGHT = this.isTablet() ? tabletSize.others.height : defaultSize.others.width;
   }
 }
