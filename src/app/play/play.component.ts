@@ -9,36 +9,39 @@ import animes from '../animes.json';
   styleUrls: ['./play.component.scss'],
 })
 export class PlayComponent implements OnInit {
-  videoUrl = '';
-  detail: detailsType = {
-    image: '',
-    sinopse: '',
-    category: '',
-    title: '',
-  };
+  videoUrl!: string;
+  detail!: detailsType;
+  id!: number;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.setPlayById(Number(this.route.snapshot.paramMap.get('id')))
+    this.id = Number(this.route.snapshot.paramMap.get('id'))
+    this.setVideo()
   }
 
-  setPlayById(id: number) {
-    animes.forEach((anime) => {
-      if (anime.id === id) {
-        this.videoUrl = anime.episodes[0].url;
+  setVideo() {
+    const anime = this.getAnimeById(this.id)
+    this.videoUrl = anime.episodes[0].url;
 
-        this.detail = {
-          image: anime.cover,
-          sinopse: anime.details.sinopse,
-          category: anime.details.category,
-          title: anime.title,
-        };
-      }
-    });
+    this.detail = {
+      image: anime.cover,
+      sinopse: anime.details.sinopse,
+      category: anime.details.category,
+      title: anime.title,
+    };
   }
 
   newEpisode(url: string) {
     this.videoUrl = url;
   }
+
+  getAnimeById(id: number) {
+    return animes
+      .filter((anime) => anime.id === id)
+      .reduce((obj: any, item: any) => Object.assign(obj, {
+        ...item
+      }), {})
+  }
 }
+
