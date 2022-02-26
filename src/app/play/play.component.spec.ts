@@ -1,5 +1,6 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { SafeUrlPipe } from '../safe-url.pipe'
 
@@ -13,8 +14,7 @@ describe('PlayComponent', () => {
     const activatedRouteSpy = {
       snapshot: {
         paramMap: convertToParamMap({
-          id: 'dads123',
-          code: 'IBM',
+          id: '1',
         })
       }
     };
@@ -43,5 +43,22 @@ describe('PlayComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+
+  it('should change url when clicking on episode', fakeAsync(() => {
+    fixture.detectChanges();    
+    spyOn(component, 'newEpisode');
+    let btn = fixture.debugElement.query(By.css('app-episodes'));
+    btn.triggerEventHandler('changeEpisode', null);
+    tick();
+    fixture.detectChanges();
+
+    expect(component.newEpisode).toHaveBeenCalled();    
+  }));
+
+  it('should setVideo', () => {
+    component.setVideo()
+    expect(component.detail).toBeDefined()
   });
 });
