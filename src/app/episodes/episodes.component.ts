@@ -16,7 +16,7 @@ export class EpisodesComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    this.id = this.getId()
     this.setEpisodes();
   }
 
@@ -31,7 +31,7 @@ export class EpisodesComponent implements OnInit {
           cover: ep.image,
           episode: ep.number,
           videoUrl: ep.url,
-          movie: anime.movie,
+          movie: anime.movie,          
         });
       })
   }
@@ -43,8 +43,13 @@ export class EpisodesComponent implements OnInit {
   findAnimeById(id: number) {
     return animes
       .filter((anime => anime.id === id))
-      .reduce((obj: any, item: CardType) => Object.assign(obj, {
+      .reduce((obj: any, item: any) => Object.assign(obj, {
         ...item
       }), {})
+  }
+
+  getId() {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    return id
   }
 }
