@@ -10,8 +10,14 @@
     white-space: nowrap;
     height: auto;
     width: 100vw;
-    margin-top: 5px;
+    margin-top: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $sm) {
+      flex-direction: row;
+    }
 
     &::-webkit-scrollbar {
       width: 1em;
@@ -23,7 +29,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $secondary;      
+      background-color: $secondary;
       border-radius: 20px;
     }
 
