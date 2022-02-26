@@ -1,23 +1,23 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardComponent } from './card.component';
-import { CardType } from './card.component';
+import { CardComponent, CardType } from './card.component';
 
-const cardMock = {
+const cardMock: CardType = {
   id: 1,
-  title: '',
-  image: ''
+  cover: '',
+  title: ''
 }
-
 describe('CardComponent', () => {
   let component: CardComponent;
   let fixture: ComponentFixture<CardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CardComponent ]
+      declarations: [CardComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
