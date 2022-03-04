@@ -13,7 +13,7 @@
 - [Figma](https://www.figma.com/) (Layout)
 - [Vercel](https://vercel.com/) (Deploy)
 
-## 🗣️ Contact me
+## 🗣️ Entre em contato
 [![Youtube URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/youtube.svg)](https://www.youtube.com/c/LiaraProgramadora?sub_confirmation=1)
 [![LinkedIn URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/linkedin.svg)](https://www.linkedin.com/in/liara-programadora)
 [![Instagram URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/instagram.svg)](https://www.instagram.com/liaraprogramadora/)
