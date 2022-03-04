@@ -3,7 +3,7 @@
 
 ## 🚀 **Aplicação rodando [aqui](https://animes-online-angular.vercel.app/home)**
 
-### 🖌️ **Layout no Figma [aqui](https://www.figma.com/file/GXh3IYv94teEHU8aNHds2s/Animes-Online-(Community)?node-id=0%3A1)**
+🖌️ **Layout no Figma [aqui](https://www.figma.com/file/GXh3IYv94teEHU8aNHds2s/Animes-Online-(Community)?node-id=0%3A1)**
 
 ## 🛠️ Tecnologias usadas
 - [Sass](https://sass-lang.com/) (Estilo)
