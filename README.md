@@ -1,11 +1,17 @@
 # ![Logo](https://animes-online-angular.vercel.app/assets/icons/logo.svg) AnimeOnline
-> Esse projeto é uma página que lista animes e episódios e permite assistir os episódios sem sair da aplicação usando embed do mega.
->
-> Seu ntuito é colocar em prática os meus conhecimentos em programação. Eu usei Angular no front-end com Sass e Typescript, fiz testes unitários com 100% de coverage usando Jasmine e Karma. Usei rotas para navegar entre as páginas sem ter que recarregar.
+> **Esse projeto é uma página web para lista animes com seus episódios e permite assistir dentro da aplicação.**
 
 ## 🚀 **Aplicação rodando [aqui](https://animes-online-angular.vercel.app/home)**
 
 ### 🖌️ **Layout no Figma [aqui](https://www.figma.com/file/GXh3IYv94teEHU8aNHds2s/Animes-Online-(Community)?node-id=0%3A1)**
+
+## 🛠️ Tecnologias usadas
+- [Sass](https://sass-lang.com/) (Estilo)
+- [Angular](https://angular.io/) (Front-end)
+- [Karma](https://karma-runner.github.io/6.3/index.html) (Testes)
+- [Jasmine](https://jasmine.github.io/index.html) (Testes)
+- [Figma](https://www.figma.com/) (Layout)
+- [Vercel](https://vercel.com/) (Deploy)
 
 ## 🗣️ Contact me
 [![Youtube URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/youtube.svg)](https://www.youtube.com/c/LiaraProgramadora?sub_confirmation=1)
