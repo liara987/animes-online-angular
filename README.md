@@ -10,7 +10,6 @@
 - [Angular](https://angular.io/) (Front-end)
 - [Karma](https://karma-runner.github.io/6.3/index.html) (Testes)
 - [Jasmine](https://jasmine.github.io/index.html) (Testes)
-- [Figma](https://www.figma.com/) (Layout)
 - [Vercel](https://vercel.com/) (Deploy)
 
 ## 🗣️ Entre em contato
