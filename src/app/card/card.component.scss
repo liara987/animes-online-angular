@@ -4,6 +4,10 @@
   position: relative;
   height: auto;
   width: 100%;
+  
+   &:hover, &:active {
+    cursor: pointer;
+  }
 
   &-quality,
   &-subtitle,
