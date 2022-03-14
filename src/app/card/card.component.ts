@@ -4,7 +4,6 @@ export interface CardType {
   id: number;
   title: string;
   cover: string;
-  video?: string;
   width?: number;
   height?: number;
   description?: string;
