@@ -1,0 +1,1749 @@
+{
+    "pipes": [
+        {
+            "name": "SafeUrlPipe",
+            "id": "pipe-SafeUrlPipe-6198970802b049db18d2ce245925cab93b6a4ec61545f78d342698bb9ed6ce9a2c3a819e5e134fbc25e51bbc4844d2a1922688d68710d75eeb63f2ae1009c1fc",
+            "file": "src/app/safe-url.pipe.ts",
+            "type": "pipe",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "properties": [],
+            "methods": [
+                {
+                    "name": "transform",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 7,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "ngname": "safeUrl",
+            "sourceCode": "import { Pipe, PipeTransform } from '@angular/core';\r\nimport { DomSanitizer } from '@angular/platform-browser';\r\n\r\n@Pipe({name: 'safeUrl',})\r\nexport class SafeUrlPipe implements PipeTransform {\r\n  constructor(private sanitizer: DomSanitizer) {}\r\n  transform(url: string) {\r\n    return this.sanitizer.bypassSecurityTrustResourceUrl(url);\r\n  }\r\n}\r\n"
+        }
+    ],
+    "interfaces": [
+        {
+            "name": "ButtonType",
+            "id": "interface-ButtonType-b69ad528ef7d3e38c4d809ff9cf4d926d9d90069a5484a795bd8e0e2b5a758d8e72dc6318094dc7b564b79a55bf77cc75fbb20ada9148d01482add2eeb433cb3",
+            "file": "src/app/button/button.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: any;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "fontSize",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "CardType",
+            "id": "interface-CardType-6fee7ed8ac531384a01cc208125722e7d94083c21537410112be873ef38adcd74427b23d3a25b5d0bf997bf4e0b32e28f888144c17fc721472709cbd447b8b4e",
+            "file": "src/app/card/card.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface CardType {\r\n  id: number;\r\n  title: string;\r\n  cover: string;\r\n  width?: number;\r\n  height?: number;\r\n  description?: string;\r\n  episode?: number;\r\n  quality?: string;\r\n  subtitle?: string;\r\n  videoUrl?: string;\r\n  movie?: boolean;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-card',\r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss'],\r\n})\r\nexport class CardComponent {\r\n  @Input()\r\n  Card!: CardType;\r\n}",
+            "properties": [
+                {
+                    "name": "cover",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "episode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "height",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "movie",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": true,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "quality",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "subtitle",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "videoUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": true,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "detailsType",
+            "id": "interface-detailsType-704eb2797e49a2c13d3f62fcceeb0ccaad498b67519d3734290830d4d43077942d8e7b54e1a3ca1bfa1d2211bcd491a597a2befd0cdf934c8ad066f1045ee4f6",
+            "file": "src/app/details/details.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nexport interface detailsType {\r\n  image: string;\r\n  sinopse: string;\r\n  category: string;\r\n  title: string;\r\n}\r\n@Component({\r\n  selector: 'app-details',\r\n  templateUrl: './details.component.html',\r\n  styleUrls: ['./details.component.scss'],\r\n})\r\nexport class DetailsComponent {\r\n  @Input()\r\n  data!: detailsType;\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "category",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "image",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "sinopse",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "title",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "SizeType",
+            "id": "interface-SizeType-3033cf4932fe0399745906122c0737deea0512c36dde58601e70cf83412f9da8cf68d7ab0c72a2f6a6ed66bf0a9914f4bef082b825b12b49d0a7c529caf1a071",
+            "file": "src/app/home/home.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, HostListener, OnInit } from '@angular/core';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\ninterface SizeType {\r\n  firstItem: {\r\n    width: number,\r\n    height: number,\r\n  },\r\n  others: {\r\n    width: number,\r\n    height: number,\r\n  }\r\n}\r\n@Component({\r\n  selector: 'app-home',\r\n  templateUrl: './home.component.html',\r\n  styleUrls: ['./home.component.scss'],\r\n})\r\nexport class HomeComponent implements OnInit {\r\n  tabletSize: SizeType = {\r\n    firstItem: {\r\n      width: 300,\r\n      height: 400\r\n    },\r\n    others: {\r\n      width: 200,\r\n      height: 200\r\n    }\r\n  }\r\n\r\n  sizes: SizeType = {\r\n    firstItem: {\r\n      width: 450,\r\n      height: 550\r\n    },\r\n    others: {\r\n      width: 250,\r\n      height: 250\r\n    }\r\n  };\r\n\r\n  cards: CardType[] = [];\r\n  highlight: CardType[] = [];\r\n\r\n  ngOnInit(): void {\r\n    this.changeCardSizes()\r\n    this.setCards()\r\n  }\r\n\r\n  @HostListener('window:resize', ['$event'])\r\n  onWindowResize() {\r\n    this.changeCardSizes()\r\n    this.setCards()\r\n  }\r\n\r\n  setCards() {\r\n    animes.forEach((anime, i) => {\r\n      this.highlight[i] = {\r\n        id: anime.id,\r\n        title: anime.title,\r\n        cover: anime.cover,\r\n        movie: anime.movie,\r\n        width: i === 0 && !this.isMobile() ? this.sizes.firstItem.width : this.sizes.others.width,\r\n        height: i === 0 && !this.isMobile() ? this.sizes.firstItem.height : this.sizes.others.height\r\n      };\r\n\r\n      this.cards[i] = {\r\n        id: anime.id,\r\n        title: anime.title,\r\n        episode: anime.episodes[0].number,\r\n        cover: anime.episodes[0].image,\r\n        quality: anime.episodes[0].quality,\r\n        subtitle: anime.episodes[0].subtitle,\r\n        movie: anime.movie,\r\n      };\r\n    });\r\n  }\r\n\r\n  getInnerWidth() {\r\n    return window.innerWidth;\r\n  }\r\n\r\n  isMobile(): boolean {\r\n    const mobileLarge = 425\r\n    return this.getInnerWidth() <= mobileLarge\r\n  }\r\n\r\n  isTablet(): boolean {\r\n    const tablet = 768;\r\n    return this.getInnerWidth() <= tablet && !this.isMobile()\r\n  }\r\n\r\n  changeCardSizes() {\r\n    if (this.isTablet()) {\r\n      this.sizes = {\r\n        ...this.tabletSize\r\n      }\r\n    } else if (this.isMobile()) {\r\n      this.sizes = {\r\n        ...this.sizes,\r\n        others: {\r\n          width: 150,\r\n          height: 150\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+            "properties": [
+                {
+                    "name": "firstItem",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "others",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-21362cc382374e864a9b5fc5a19f8c8eb8034b88fef9bd1082a3c33eaf24e12fde7fff50798f000bbabed5efe18677c144d63438726ca060c20a23fde7dc1439",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss'],\r\n})\r\nexport class AppComponent {}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "* {\r\n  width: 100vw;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.animes-online {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\napp-footer {\r\n  display: flex;\r\n  align-self: flex-end;\r\n}\r\n",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"animes-online\">\r\n<app-nav-bar></app-nav-bar>\r\n<router-outlet></router-outlet>\r\n<app-footer></app-footer>\r\n</div>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-b69ad528ef7d3e38c4d809ff9cf4d926d9d90069a5484a795bd8e0e2b5a758d8e72dc6318094dc7b564b79a55bf77cc75fbb20ada9148d01482add2eeb433cb3",
+            "file": "src/app/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "Button",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: any;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../variables.scss\";\r\n\r\n.filled {\r\n  width: 100%;\r\n  height: 25px;\r\n  padding: 5px;\r\n  border-radius: 5px;\r\n  border: none;\r\n  font-size: 16px;\r\n  letter-spacing: 0.05em;\r\n  color: $white;\r\n  background: $primary;\r\n\r\n  @media (min-width: $sm) {\r\n    width: 100%;\r\n    height: 35px;\r\n    padding: 10px;\r\n    font-size: 18px;\r\n  }\r\n}\r\n",
+                    "styleUrl": "./button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<input\r\n  *ngIf=\"Button.value\"  \r\n  type=\"button\"\r\n  class=\"filled\"\r\n  value=\"{{ Button.value }}\"\r\n  [ngStyle]=\"{\r\n    width: Button?.width + 'px',\r\n    height: Button?.height + 'px',\r\n    'font-size': Button.fontSize + 'px'\r\n  }\"\r\n/>\r\n"
+        },
+        {
+            "name": "CardComponent",
+            "id": "component-CardComponent-6fee7ed8ac531384a01cc208125722e7d94083c21537410112be873ef38adcd74427b23d3a25b5d0bf997bf4e0b32e28f888144c17fc721472709cbd447b8b4e",
+            "file": "src/app/card/card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-card",
+            "styleUrls": [
+                "./card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "Card",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 24,
+                    "type": "CardType",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface CardType {\r\n  id: number;\r\n  title: string;\r\n  cover: string;\r\n  width?: number;\r\n  height?: number;\r\n  description?: string;\r\n  episode?: number;\r\n  quality?: string;\r\n  subtitle?: string;\r\n  videoUrl?: string;\r\n  movie?: boolean;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-card',\r\n  templateUrl: './card.component.html',\r\n  styleUrls: ['./card.component.scss'],\r\n})\r\nexport class CardComponent {\r\n  @Input()\r\n  Card!: CardType;\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../variables.scss';\r\n\r\n.card {\r\n  position: relative;\r\n  height: auto;\r\n  width: 100%;\r\n\r\n  &-quality,\r\n  &-subtitle,\r\n  &-info {\r\n    position: absolute;\r\n  }\r\n\r\n  &-quality {\r\n    left: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-subtitle {\r\n    right: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-image {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 20px;\r\n  }\r\n\r\n  &-info {\r\n    display: flex;\r\n    align-items: flex-end;    \r\n    left: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 160px;\r\n    background: linear-gradient(180deg, rgba(7, 7, 7, 0) 0%, #070707 100%);\r\n    border-radius: 0 0 20px 20px;\r\n    font-weight: 500;\r\n  }\r\n  \r\n  &-title {\r\n    margin: 0 0 10px 10px ;\r\n    font-size: 15px;\r\n    line-height: 23px;\r\n    letter-spacing: 0.05em;\r\n    flex-wrap: wrap;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    &-title{\r\n      font-size: 20px;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div \r\n  class=\"card\" \r\n  [ngStyle]=\"{\r\n    width: Card.width + 'px',\r\n    height: Card.height + 'px'    \r\n  }\"\r\n>\r\n  <app-button\r\n    class=\"card-quality\"\r\n    *ngIf=\"Card.quality\"\r\n    [Button]=\"{ value: Card.quality }\"\r\n  ></app-button>\r\n  <app-button\r\n    class=\"card-subtitle\"\r\n    *ngIf=\"Card.subtitle\"\r\n    [Button]=\"{ value: Card.subtitle }\"\r\n  ></app-button>\r\n  <img\r\n    class=\"card-image\"\r\n    src=\"{{ Card.cover }}\"\r\n    alt=\"Capa do anime {{ Card.title }}\"\r\n  />\r\n  <div class=\"card-info\">\r\n    <p class=\"card-title\">\r\n      {{ Card.title }}\r\n      <span class=\"card-episode\" *ngIf=\"!Card.movie && this.Card.episode\">\r\n        {{ \"Episódio \" + this.Card.episode }}\r\n      </span>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "DetailsComponent",
+            "id": "component-DetailsComponent-704eb2797e49a2c13d3f62fcceeb0ccaad498b67519d3734290830d4d43077942d8e7b54e1a3ca1bfa1d2211bcd491a597a2befd0cdf934c8ad066f1045ee4f6",
+            "file": "src/app/details/details.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-details",
+            "styleUrls": [
+                "./details.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./details.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "data",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "detailsType",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nexport interface detailsType {\r\n  image: string;\r\n  sinopse: string;\r\n  category: string;\r\n  title: string;\r\n}\r\n@Component({\r\n  selector: 'app-details',\r\n  templateUrl: './details.component.html',\r\n  styleUrls: ['./details.component.scss'],\r\n})\r\nexport class DetailsComponent {\r\n  @Input()\r\n  data!: detailsType;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../variables.scss\";\r\n\r\n.details {\r\n  border-top: solid $primary 5px;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  margin-bottom: 50px;\r\n  width: 100vw;\r\n\r\n  &-main {\r\n    margin: 0 20px;\r\n    height: 100%;\r\n  }\r\n\r\n  &-title {\r\n    text-align: center;\r\n    font-size: 30px;\r\n    margin: 20px 0;\r\n  }\r\n\r\n  &-label {\r\n    color: #949494;\r\n    font-weight: 500;\r\n    font-size: 20px;\r\n  }\r\n\r\n  &-sinopse {\r\n    font-size: 18px;\r\n  }\r\n\r\n  &-category {\r\n    margin-bottom: 20px;\r\n  }\r\n\r\n  &-aside-image{\r\n    margin-top: 10px;\r\n  }\r\n\r\n  &-image {\r\n    width: 300px;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    max-width: 1155px;\r\n    height: 430px;\r\n    flex-direction: row;\r\n    \r\n    &-title {\r\n      text-align: left;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./details.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"details\">\r\n  <aside class=\"details-aside-image\">\r\n    <img\r\n      class=\"details-image\"\r\n      src={{this.data.image}}\r\n      alt=\"\"\r\n    />\r\n  </aside>\r\n  <div class=\"details-main\">\r\n    <h1 class=\"details-title\">\r\n      {{this.data.title}}\r\n    </h1>\r\n    <div class=\"details-category\">\r\n      <span class=\"details-label\">Gênero:</span>\r\n      {{this.data.category}}\r\n    </div>\r\n    <p class=\"details-sinopse\">\r\n      <span class=\"details-label\">Sinópse:</span>\r\n      {{this.data.sinopse}}\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "EpisodesComponent",
+            "id": "component-EpisodesComponent-9798ac5b90a8615f44fa5190f6368aa897d21b5f2d73cd1f67e006f119404762641a0397b25ae5b1a8d5547fb911e7db1557211058164bd159700ded0c0cd4b9",
+            "file": "src/app/episodes/episodes.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-episodes",
+            "styleUrls": [
+                "./episodes.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./episodes.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "changeEpisode",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "cards",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CardType[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "findAnimeById",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 43,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "getId",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 51,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onEpisodeChange",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setEpisodes",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\n@Component({\r\n  selector: 'app-episodes',\r\n  templateUrl: './episodes.component.html',\r\n  styleUrls: ['./episodes.component.scss'],\r\n})\r\nexport class EpisodesComponent implements OnInit {\r\n  @Output() changeEpisode = new EventEmitter<string>();\r\n  cards: CardType[] = [];\r\n  id!: number;\r\n\r\n  constructor(private route: ActivatedRoute) { }\r\n\r\n  ngOnInit(): void {\r\n    this.id = this.getId()\r\n    this.setEpisodes();\r\n  }\r\n\r\n  setEpisodes() {\r\n    const anime = this.findAnimeById(this.id);\r\n\r\n    anime.episodes\r\n      .map((ep: any) => {\r\n        this.cards.push({\r\n          id: anime.id,\r\n          title: anime.title,\r\n          cover: ep.image,\r\n          episode: ep.number,\r\n          videoUrl: ep.url,\r\n          movie: anime.movie,          \r\n        });\r\n      })\r\n  }\r\n\r\n  onEpisodeChange(url?: string) {\r\n    this.changeEpisode.emit(url);\r\n  }\r\n\r\n  findAnimeById(id: number) {\r\n    return animes\r\n      .filter((anime => anime.id === id))\r\n      .reduce((obj: any, item: any) => Object.assign(obj, {\r\n        ...item\r\n      }), {})\r\n  }\r\n\r\n  getId() {\r\n    const id = Number(this.route.snapshot.paramMap.get('id'));\r\n    return id\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../variables.scss\";\r\n.episodes {\r\n  border-top: red solid 5px;\r\n  margin-top: 50px;\r\n  max-width: 1155px;\r\n\r\n  &-cards {\r\n    overflow-x: scroll;\r\n    overflow-y: hidden;\r\n    white-space: nowrap;\r\n    height: 100%;\r\n    width: 100vw;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    \r\n    \r\n    &::-webkit-scrollbar {\r\n      width: 1em;\r\n      height: 3px;\r\n    }\r\n    \r\n    &::-webkit-scrollbar-track {\r\n      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    }\r\n    \r\n    &::-webkit-scrollbar-thumb {\r\n      background-color: $secondary;\r\n      border-radius: 20px;\r\n    }\r\n    \r\n    app-card {\r\n      margin-right: 10px;\r\n      width: 320px;\r\n      height: auto;\r\n      display: inline-block;\r\n    }\r\n    @media (min-width: $sm) {\r\n      flex-direction: row;\r\n      app-card {\r\n        height: 175px;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./episodes.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"episodes\">\r\n  <div class=\"episodes-cards horizontal-scroll-wrapper\">\r\n    <app-card\r\n      (ngModel)=\"card.episode\"\r\n      (click)=\"onEpisodeChange(card.videoUrl)\"\r\n      *ngFor=\"let card of cards\"\r\n      [Card]=\"card\"\r\n      routerLink=\"/play/{{ card.id }}\"\r\n    ></app-card>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-97e25681de5c0db4340ceaf7f7c02d7064ba2a5cb24162cda6479564622cab98b8d9e97b52fdde6f9fbdc59d50c5a37f2c8c9f76c79d09d2ce1bddd261eb1bbd",
+            "file": "src/app/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [
+                "./footer.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-footer',\r\n  templateUrl: './footer.component.html',\r\n  styleUrls: ['./footer.component.scss'],\r\n})\r\nexport class FooterComponent { }\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../variables.scss';\r\n\r\n.footer {\r\n  margin-top: 25px;\r\n  width: 100vw;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: end;\r\n  align-items: center;\r\n  font-weight: 400;\r\n  border-top: solid 5px #dd0000;\r\n  height: 60px;\r\n  padding-bottom: 10px;\r\n\r\n  &-social-media {\r\n    display: flex;\r\n    align-items: center;    \r\n  }\r\n\r\n  &-link {\r\n    font-size: 12px;\r\n    margin-right: 5px;\r\n    display: flex;\r\n    align-items: center;\r\n\r\n    &:last-child {\r\n      margin-right: 0;\r\n    }\r\n  }\r\n\r\n  &-icon {\r\n    width: 25px;\r\n    margin-right: 5px;\r\n  }\r\n\r\n  &-attention {\r\n    font-size: 6px;\r\n    text-align: center;\r\n    margin-top: 10px;\r\n    font-weight: 500;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    margin-top: 50px;\r\n    height: 70px;\r\n\r\n    &-link {\r\n      font-size: 18px;\r\n      margin-right: 15px;\r\n    }\r\n\r\n    &-icon {\r\n      margin-right: 10px;\r\n    }\r\n\r\n    &-attention {\r\n      font-size: 12px;\r\n      margin: 15px 0;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./footer.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<footer class=\"footer\">\r\n  <div class=\"footer-social-media\">\r\n    <a class=\"footer-link\" href=\"https://www.facebook.com/liara.2.0/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/facebook.svg\" alt=\"Facebook\" />\r\n      @Liara Programadora\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.linkedin.com/in/liara-programadora/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/linkedin.svg\" alt=\"Linkedin\" />\r\n      @Liara Duarte\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.youtube.com/c/LiaraProgramadora\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/youtube.svg\" alt=\"Youtube\" />\r\n      @Liara Programadora\r\n    </a>\r\n  </div>\r\n  <p class=\"footer-attention\">\r\n    Atenção: Este site não hospeda nenhum vídeo. Seu desenvolvimento é somente para estudo.\r\n  </p>\r\n</footer>\r\n"
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-3033cf4932fe0399745906122c0737deea0512c36dde58601e70cf83412f9da8cf68d7ab0c72a2f6a6ed66bf0a9914f4bef082b825b12b49d0a7c529caf1a071",
+            "file": "src/app/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cards",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CardType[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 43
+                },
+                {
+                    "name": "highlight",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CardType[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 44
+                },
+                {
+                    "name": "sizes",
+                    "defaultValue": "{\r\n    firstItem: {\r\n      width: 450,\r\n      height: 550\r\n    },\r\n    others: {\r\n      width: 250,\r\n      height: 250\r\n    }\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "SizeType",
+                    "optional": false,
+                    "description": "",
+                    "line": 32
+                },
+                {
+                    "name": "tabletSize",
+                    "defaultValue": "{\r\n    firstItem: {\r\n      width: 300,\r\n      height: 400\r\n    },\r\n    others: {\r\n      width: 200,\r\n      height: 200\r\n    }\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "SizeType",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changeCardSizes",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 94,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getInnerWidth",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 80,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "isMobile",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 84,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "isTablet",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 89,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 46,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onWindowResize",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 52,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "decorators": [
+                        {
+                            "name": "HostListener",
+                            "stringifiedArguments": "'window:resize', ['$event']"
+                        }
+                    ]
+                },
+                {
+                    "name": "setCards",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 57,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [
+                {
+                    "name": "window:resize",
+                    "args": [],
+                    "argsDecorator": [
+                        "$event"
+                    ],
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 52
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, HostListener, OnInit } from '@angular/core';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\ninterface SizeType {\r\n  firstItem: {\r\n    width: number,\r\n    height: number,\r\n  },\r\n  others: {\r\n    width: number,\r\n    height: number,\r\n  }\r\n}\r\n@Component({\r\n  selector: 'app-home',\r\n  templateUrl: './home.component.html',\r\n  styleUrls: ['./home.component.scss'],\r\n})\r\nexport class HomeComponent implements OnInit {\r\n  tabletSize: SizeType = {\r\n    firstItem: {\r\n      width: 300,\r\n      height: 400\r\n    },\r\n    others: {\r\n      width: 200,\r\n      height: 200\r\n    }\r\n  }\r\n\r\n  sizes: SizeType = {\r\n    firstItem: {\r\n      width: 450,\r\n      height: 550\r\n    },\r\n    others: {\r\n      width: 250,\r\n      height: 250\r\n    }\r\n  };\r\n\r\n  cards: CardType[] = [];\r\n  highlight: CardType[] = [];\r\n\r\n  ngOnInit(): void {\r\n    this.changeCardSizes()\r\n    this.setCards()\r\n  }\r\n\r\n  @HostListener('window:resize', ['$event'])\r\n  onWindowResize() {\r\n    this.changeCardSizes()\r\n    this.setCards()\r\n  }\r\n\r\n  setCards() {\r\n    animes.forEach((anime, i) => {\r\n      this.highlight[i] = {\r\n        id: anime.id,\r\n        title: anime.title,\r\n        cover: anime.cover,\r\n        movie: anime.movie,\r\n        width: i === 0 && !this.isMobile() ? this.sizes.firstItem.width : this.sizes.others.width,\r\n        height: i === 0 && !this.isMobile() ? this.sizes.firstItem.height : this.sizes.others.height\r\n      };\r\n\r\n      this.cards[i] = {\r\n        id: anime.id,\r\n        title: anime.title,\r\n        episode: anime.episodes[0].number,\r\n        cover: anime.episodes[0].image,\r\n        quality: anime.episodes[0].quality,\r\n        subtitle: anime.episodes[0].subtitle,\r\n        movie: anime.movie,\r\n      };\r\n    });\r\n  }\r\n\r\n  getInnerWidth() {\r\n    return window.innerWidth;\r\n  }\r\n\r\n  isMobile(): boolean {\r\n    const mobileLarge = 425\r\n    return this.getInnerWidth() <= mobileLarge\r\n  }\r\n\r\n  isTablet(): boolean {\r\n    const tablet = 768;\r\n    return this.getInnerWidth() <= tablet && !this.isMobile()\r\n  }\r\n\r\n  changeCardSizes() {\r\n    if (this.isTablet()) {\r\n      this.sizes = {\r\n        ...this.tabletSize\r\n      }\r\n    } else if (this.isMobile()) {\r\n      this.sizes = {\r\n        ...this.sizes,\r\n        others: {\r\n          width: 150,\r\n          height: 150\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../variables.scss';\r\n\r\n.home {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  width: fit-content;\r\n\r\n  .section-title {\r\n    align-self: flex-start;\r\n    font-size: 30px;\r\n    margin-bottom: 20px;\r\n    border-bottom: 4px solid #dd0000;\r\n    width: 100%;    \r\n  }\r\n\r\n  .highlight {\r\n    &-cards {\r\n      display: grid;\r\n      grid-template-columns: repeat(2, auto);\r\n      grid-gap: 10px;\r\n      justify-items: center;\r\n\r\n      & app-card {\r\n        grid-column: span 1;\r\n        grid-row: span 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .released {    \r\n    margin-top: 25px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    &-cards {\r\n      display: inline-grid;\r\n      grid-template-columns: repeat(1, 320px);\r\n      grid-template-rows: repeat(1, auto);\r\n      grid-gap: 20px;\r\n      justify-content: center;\r\n    }\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    .highlight {\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(7, auto);\r\n        grid-template-rows: repeat(2, auto);\r\n        grid-gap: 15px;\r\n        justify-content: center;\r\n    \r\n\r\n        & app-card:nth-child(1) {\r\n          grid-column: span 3;\r\n          grid-row: span 2;\r\n        }\r\n\r\n        & app-card {\r\n          grid-column: span 2;\r\n          grid-row: span 1;\r\n        }\r\n      }\r\n    }\r\n\r\n    .released {\r\n      margin-top: 50px;\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(3, 350px);\r\n        grid-gap: 25px;\r\n      }\r\n    }\r\n  }\r\n\r\n  @media (max-width: $lg ) and (min-width: $sm) {    \r\n    .released {\r\n      &-cards {\r\n        grid-template-columns: repeat(2, 350px);        \r\n      }\r\n    }\r\n  }\r\n}",
+                    "styleUrl": "./home.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"home\">\r\n  <div class=\"highlight\">\r\n    <div class=\"section-title\">Destaques</div>\r\n    <div class=\"highlight-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of highlight\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"released\">\r\n    <div class=\"section-title\">Lançamentos</div>\r\n    <div class=\"released-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of cards\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ListComponent",
+            "id": "component-ListComponent-e9c4321cece69a75cf7b10b35c481e3469672f6bef153535582de84f9aa0fd593f0a0c678aae86745bf3a4dbb8a72d0c6613f0cb546168984df9156012593c41",
+            "file": "src/app/list/list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-list",
+            "styleUrls": [
+                "./list.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./list.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "cards",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CardType[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setCards",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\n@Component({\r\n  selector: 'app-list',\r\n  templateUrl: './list.component.html',\r\n  styleUrls: ['./list.component.scss'],\r\n})\r\nexport class ListComponent implements OnInit {\r\n  cards: CardType[] = [];\r\n\r\n  ngOnInit(): void {\r\n    this.setCards()\r\n  }\r\n\r\n  setCards() {\r\n    animes.forEach((anime, i) => {\r\n      this.cards[i] = {\r\n        id: anime.id,\r\n        title: anime.title,\r\n        cover: anime.cover,\r\n      };\r\n    });\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../variables.scss';\r\n\r\n.list {\r\n  height: 100%;\r\n  \r\n  &-cards {    \r\n    display: grid;\r\n    grid-template-columns: repeat(2, auto);\r\n    gap: 15px;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    &-cards{\r\n      grid-template-columns: repeat(4, 200px);\r\n      gap: 30px;\r\n    }\r\n  }\r\n\r\n  @media (min-width: $md) and (max-width: $lg){\r\n    &-cards{\r\n      grid-template-columns: repeat(3, 200px);\r\n      gap: 30px;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./list.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"list\">\r\n  <div class=\"list-cards\">\r\n    <app-card *ngFor=\"let card of cards\" [Card]=\"card\" routerLink=\"play/{{card.id}}\"></app-card>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "NavBarComponent",
+            "id": "component-NavBarComponent-0c0755af47b06531b6dcb5be9d587bb4a971729811834d0a2f768310b4dd02484f686d75dd78d751ad4374c6a0ba1149ad70b8308049c1e0d08a3cd898a30939",
+            "file": "src/app/nav-bar/nav-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-nav-bar",
+            "styleUrls": [
+                "./nav-bar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./nav-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-nav-bar',\r\n  templateUrl: './nav-bar.component.html',\r\n  styleUrls: ['./nav-bar.component.scss'],\r\n})\r\nexport class NavBarComponent { }",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import '../variables.scss';\r\n\r\n.nav-bar {\r\n  display: flex;\r\n  justify-content: flex-end;\r\n  align-items: center;\r\n  position: relative;\r\n  margin: 15px 15px 30px;\r\n\r\n  &-logo {\r\n    margin-right: 5px;\r\n    height: 100%;\r\n  }\r\n  \r\n  &-home{\r\n    display: flex;\r\n    align-items: flex-start;\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n  }\r\n\r\n  &-link {\r\n    font-size: 20px;\r\n    letter-spacing: 0.05em;\r\n    margin-right: 15px;\r\n\r\n    &:last-child {\r\n      margin-right: 0;\r\n    }\r\n\r\n    &:hover:not(.logo) {\r\n      border-bottom: 1px solid $primary;\r\n      box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);\r\n    }\r\n  }\r\n\r\n  &-title,\r\n  &-subtitle {\r\n    margin: 0;\r\n    font-family: \"Aubrey\", cursive;\r\n  }\r\n\r\n  &-title {\r\n    font-size: 24px;\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n\r\n  &-subtitle {\r\n    font-size: 10px;    \r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    justify-content: center;\r\n    margin: 30px;\r\n    height: 48px;\r\n\r\n    &-logo {\r\n      margin-right: 10px;\r\n      width: 32px;\r\n    }\r\n\r\n    &-link {\r\n      font-size: 25px;\r\n      letter-spacing: 0.05em;\r\n      margin-right: 30px;\r\n      cursor: pointer;\r\n\r\n      &:hover:not(.logo) {\r\n        border-bottom: 1px solid $primary;\r\n        box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);\r\n      }\r\n    }\r\n\r\n    &-title {\r\n      font-size: 20px;\r\n    }\r\n\r\n    &-subtitle {\r\n      font-size: 10px;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./nav-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<nav class=\"nav-bar\">\r\n  <a class=\"nav-bar-home\" routerLink=\"/home\">\r\n    <img class=\"nav-bar-logo\" src=\"assets/icons/logo.svg\" alt=\"logo\" />\r\n    <h1 class=\"nav-bar-title\">Animes Online.\r\n      <span class=\"nav-bar-subtitle\">Bem vindo ao melhor site de animes</span>\r\n    </h1>\r\n  </a>\r\n  <div class=\"nav-bar-wrapper\">\r\n    <a class=\"nav-bar-link\" routerLink=\"/home\">Inicio</a>\r\n    <a class=\"nav-bar-link\" routerLink=\"/list\">Lista</a>\r\n  </div>\r\n</nav>\r\n"
+        },
+        {
+            "name": "PlayComponent",
+            "id": "component-PlayComponent-46e7d3335b633df014b10cc4c062e70cd8d5e98ec350bf03c23476e102b63ff4b9c76f45aa875d59aaacb6b6d1668aeaf09c26b7b122caf3987a20064b6337f6",
+            "file": "src/app/play/play.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-play",
+            "styleUrls": [
+                "./play.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./play.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "detail",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "detailsType",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "videoUrl",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getAnimeById",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "newEpisode",
+                    "args": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "url",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setVideo",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { detailsType } from '../details/details.component';\r\nimport animes from '../animes.json';\r\n\r\n@Component({\r\n  selector: 'app-play',\r\n  templateUrl: './play.component.html',\r\n  styleUrls: ['./play.component.scss'],\r\n})\r\nexport class PlayComponent implements OnInit {\r\n  videoUrl!: string;\r\n  detail!: detailsType;\r\n  id!: number;\r\n\r\n  constructor(private route: ActivatedRoute) { }\r\n\r\n  ngOnInit(): void {\r\n    this.id = Number(this.route.snapshot.paramMap.get('id'))\r\n    this.setVideo()\r\n  }\r\n\r\n  setVideo() {\r\n    const anime = this.getAnimeById(this.id)\r\n    this.videoUrl = anime.episodes[0].url;\r\n\r\n    this.detail = {\r\n      image: anime.cover,\r\n      sinopse: anime.details.sinopse,\r\n      category: anime.details.category,\r\n      title: anime.title,\r\n    };\r\n  }\r\n\r\n  newEpisode(url: string) {\r\n    this.videoUrl = url;\r\n  }\r\n\r\n  getAnimeById(id: number) {\r\n    return animes\r\n      .filter((anime) => anime.id === id)\r\n      .reduce((obj: any, item: any) => Object.assign(obj, {\r\n        ...item\r\n      }), {})\r\n  }\r\n}\r\n\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../variables.scss\";\r\n\r\n.play {\r\n  display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    justify-content: center;\r\n    width: fit-content;\r\n\r\n  &-episodes {\r\n    margin-top: 50px;\r\n  }\r\n\r\n  .video {\r\n    max-width: 425px;    \r\n    width: 100%;\r\n    height: 250px;\r\n    \r\n    iframe {\r\n      width: 100%;\r\n      height: 100%;\r\n    }\r\n  }\r\n  @media (min-width: $sm) {\r\n    .video {\r\n      max-width: 1155px;\r\n      height: 530px;\r\n    }\r\n  }\r\n}\r\n",
+                    "styleUrl": "./play.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "route",
+                        "type": "ActivatedRoute",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"play\">\r\n  <app-details [data]=\"detail\"></app-details>\r\n  <div class=\"video\">\r\n    <iframe\r\n      [src]=\"videoUrl | safeUrl\"\r\n      frameborder=\"0\"\r\n      allowfullscreen\r\n      class=\"play-video\"\r\n    ></iframe>\r\n  </div>\r\n  <app-episodes\r\n    (changeEpisode)=\"newEpisode($event)\"\r\n    class=\"play-episodes\"\r\n  ></app-episodes>\r\n</div>\r\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-96e792ace461ea43524592ef8bc1e1370a5df30baed0378c63781f60c219f473fe53ab992e5597b2cfccde301f3d62c3cf0032247f27ed034815311900767c98",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { HttpClientModule } from '@angular/common/http';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { CardComponent } from './card/card.component';\r\nimport { FooterComponent } from './footer/footer.component';\r\nimport { PlayComponent } from './play/play.component';\r\nimport { HomeComponent } from './home/home.component';\r\nimport { ListComponent } from './list/list.component';\r\nimport { SafeUrlPipe } from './safe-url.pipe';\r\nimport { EpisodesComponent } from './episodes/episodes.component';\r\nimport { DetailsComponent } from './details/details.component';\r\n\r\nconst routes: Routes = [\r\n  { path: 'home', component: HomeComponent },\r\n  { path: 'list', component: ListComponent },\r\n  { path: 'list/play/:id', component: PlayComponent },\r\n  { path: 'play/:id', component: PlayComponent },\r\n  { path: 'episodes/:id', component: EpisodesComponent },\r\n  { path: '', redirectTo: '/home', pathMatch: 'full' },\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NavBarComponent,\r\n    ButtonComponent,\r\n    CardComponent,\r\n    FooterComponent,\r\n    PlayComponent,\r\n    HomeComponent,\r\n    ListComponent,\r\n    SafeUrlPipe,\r\n    EpisodesComponent,\r\n    DetailsComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule, \r\n    RouterModule.forRoot(routes), \r\n    HttpClientModule],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]\r\n})\r\nexport class AppModule {}\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "CardComponent"
+                        },
+                        {
+                            "name": "DetailsComponent"
+                        },
+                        {
+                            "name": "EpisodesComponent"
+                        },
+                        {
+                            "name": "FooterComponent"
+                        },
+                        {
+                            "name": "HomeComponent"
+                        },
+                        {
+                            "name": "ListComponent"
+                        },
+                        {
+                            "name": "NavBarComponent"
+                        },
+                        {
+                            "name": "PlayComponent"
+                        },
+                        {
+                            "name": "SafeUrlPipe"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button/button.componet.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/card/card.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/footer/footer.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "() => ({\r\n  })"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/nav-bar/nav-bar.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "() => ({\r\n  })"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/button/button.componet.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "args => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/card/card.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "args => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  })"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/app/button/button.componet.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button/button.componet.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/button/button.componet.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "args => ({\r\n  props: {\r\n    ...args,\r\n  },\r\n})"
+                }
+            ],
+            "src/app/card/card.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/card/card.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/card/card.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "args => ({\r\n    props: {\r\n      ...args,\r\n    },\r\n  })"
+                }
+            ],
+            "src/app/footer/footer.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/footer/footer.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "() => ({\r\n  })"
+                }
+            ],
+            "src/app/nav-bar/nav-bar.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/nav-bar/nav-bar.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "() => ({\r\n  })"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "kind": "component",
+                "component": "HomeComponent",
+                "path": "home"
+            },
+            {
+                "kind": "component",
+                "component": "ListComponent",
+                "path": "list"
+            },
+            {
+                "kind": "component",
+                "component": "PlayComponent",
+                "path": "list/play/:id"
+            },
+            {
+                "kind": "component",
+                "component": "PlayComponent",
+                "path": "play/:id"
+            },
+            {
+                "kind": "component",
+                "component": "EpisodesComponent",
+                "path": "episodes/:id"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "ButtonType",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.componet.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.componet.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/card/card.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/card/card.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/card/card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/card/card.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "CardType",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/details/details.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DetailsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/details/details.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "detailsType",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/episodes/episodes.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "EpisodesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/10",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/footer/footer.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/home/home.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "SizeType",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/list/list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/nav-bar/nav-bar.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/nav-bar/nav-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/play/play.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PlayComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/9",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/safe-url.pipe.ts",
+                "type": "pipe",
+                "linktype": "pipe",
+                "name": "SafeUrlPipe",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
