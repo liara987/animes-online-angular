@@ -12,6 +12,9 @@
 - [Jasmine](https://jasmine.github.io/index.html) (Testes)
 - [Vercel](https://vercel.com/) (Deploy)
 
+## Cobertura de testes
+![coverage](https://media-exp1.licdn.com/dms/image/C4D22AQE1KNE-vtS6Ww/feedshare-shrink_1280/0/1645846668678?e=2147483647&v=beta&t=el9vvx-D65YLjE1nboTdy9rXMmRB9BQntV0FL1z5YcU)
+
 ## 🗣️ Entre em contato
 [![Youtube URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/youtube.svg)](https://www.youtube.com/c/LiaraProgramadora?sub_confirmation=1)
 [![LinkedIn URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/linkedin.svg)](https://www.linkedin.com/in/liara-programadora)
