@@ -1,5 +1,6 @@
 # ![Logo](https://animes-online-angular.vercel.app/assets/icons/logo.svg) AnimeOnline
 > **Esse projeto é uma página web para lista animes com seus episódios e permite assistir dentro da aplicação.**
+![Aplicação](https://github.com/liara987/animes-online-angular/blob/main/aplica%C3%A7%C3%A3o(800px).gif)
 
 ## 🚀 **Aplicação rodando [aqui](https://animes-online-angular.vercel.app/home)**
 
