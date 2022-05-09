@@ -1,5 +1,5 @@
 # ![Logo](https://animes-online-angular.vercel.app/assets/icons/logo.svg) AnimeOnline
-Essa aplicação é uma página responsiva que lista alguns dos meus animes favoritos, com 3 episódios de cada um e dois filmes completos, que estão hospedados no Mega. O intuito dessa aplicação é de colocar em prática e aprimorar meus conhecimentos em front-end, o framework utilizado foi o Angular, com o sass de pré-processador do css, foram realizados testes com boa cobertura de coverage com jasmine e karma e o deploy foi realizado na plataforma Vercel que realiza o CI/CD da aplicação.
+Essa aplicação é uma página responsiva que lista alguns dos meus animes favoritos, com 3 episódios cada um e dois filmes completos. Os videos estão hospedados no Mega e são indesidos na aplicação por embed. O intuito dessa aplicação é colocar em prática e aprimorar meus conhecimentos em front-end, as tecnologias foram **Angular** como framework de front-end, **SASS** como pré-processador de css, os testes unitários foram realizados com **Jasmine e Karma** que é o padrão do Angular e estão com boa cobertura no coverage, o deploy foi feito na plataforma **Vercel**, que realiza de forma automática toda a parte de **CI/CD** da aplicação.
 
 ## Aplicação rodando
 ![Aplicação](https://github.com/liara987/animes-online-angular/blob/main/aplica%C3%A7%C3%A3o(800px).gif)
@@ -19,9 +19,5 @@ Essa aplicação é uma página responsiva que lista alguns dos meus animes favo
 - [Jasmine](https://jasmine.github.io/index.html) (Testes)
 - [Vercel](https://vercel.com/) (Deploy)
 
-
-
 ## 🗣️ Entre em contato
-[![Youtube URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/youtube.svg)](https://www.youtube.com/c/LiaraProgramadora?sub_confirmation=1)
 [![LinkedIn URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/linkedin.svg)](https://www.linkedin.com/in/liara-programadora)
-[![Instagram URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/instagram.svg)](https://www.instagram.com/liaraprogramadora/)
