@@ -1,20 +1,18 @@
 @import '../variables.scss';
 
 .footer {
-  margin-top: 25px;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
   font-weight: 400;
-  border-top: solid 5px #dd0000;
-  height: 60px;
+  height: 45px;
   padding-bottom: 10px;
 
   &-social-media {
     display: flex;
-    align-items: center;    
+    align-items: center;
   }
 
   &-link {
@@ -41,7 +39,6 @@
   }
 
   @media (min-width: $sm) {
-    margin-top: 50px;
     height: 70px;
 
     &-link {
