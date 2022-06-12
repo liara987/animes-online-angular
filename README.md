@@ -9,8 +9,10 @@ Essa aplicação é uma página responsiva que lista alguns dos meus animes favo
 ## Testes
 ![testes](https://github.com/liara987/animes-online-angular/blob/main/screenshots/Screenshot%20at%202022-05-10%2000-13-05.png)
 
-## Cobertura de testes
 ![coverage](https://github.com/liara987/animes-online-angular/blob/main/screenshots/Screenshot%20at%202022-05-10%2000-16-25.png)
 
 ## 🗣️ Entre em contato
 [![LinkedIn URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/linkedin.svg)](https://www.linkedin.com/in/liara-programadora)
+
+
+[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCkjlpKaG0SUeCQso6Lt2gbg)
