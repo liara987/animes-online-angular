@@ -14,6 +14,8 @@ import { ListComponent } from './list/list.component';
 import { SafeUrlPipe } from './safe-url.pipe';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { DetailsComponent } from './details/details.component';
+import { FilterComponent } from './filter/filter.component';
+import { LineComponent } from './line/line.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -37,10 +39,12 @@ const routes: Routes = [
     SafeUrlPipe,
     EpisodesComponent,
     DetailsComponent,
+    FilterComponent,
+    LineComponent,
   ],
   imports: [
-    BrowserModule, 
-    RouterModule.forRoot(routes), 
+    BrowserModule,
+    RouterModule.forRoot(routes),
     HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

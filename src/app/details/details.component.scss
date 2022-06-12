@@ -1,7 +1,6 @@
 @import "../variables.scss";
 
 .details {
-  border-top: solid $primary 5px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -33,19 +32,20 @@
     margin-bottom: 20px;
   }
 
-  &-aside-image{
+  &-aside-image {
     margin-top: 10px;
   }
 
   &-image {
     width: 300px;
+    height: 405px;
   }
 
   @media (min-width: $sm) {
     max-width: 1155px;
     height: 430px;
     flex-direction: row;
-    
+
     &-title {
       text-align: left;
     }
