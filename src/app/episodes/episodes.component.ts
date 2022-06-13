@@ -31,7 +31,8 @@ export class EpisodesComponent implements OnInit {
           cover: ep.image,
           episode: ep.number,
           videoUrl: ep.url,
-          movie: anime.movie,          
+          movie: anime.movie,
+          height: 175          
         });
       })
   }
