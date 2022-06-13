@@ -47,12 +47,12 @@
     "interfaces": [
         {
             "name": "ButtonType",
-            "id": "interface-ButtonType-b69ad528ef7d3e38c4d809ff9cf4d926d9d90069a5484a795bd8e0e2b5a758d8e72dc6318094dc7b564b79a55bf77cc75fbb20ada9148d01482add2eeb433cb3",
+            "id": "interface-ButtonType-06bd89807ede3d2823d4ad07b340b421ccd3f1b1f1aa6e10a67c7a6ca4f491b1adffc75334e34613181042861d2533e1b52c28d66f58300036be93cfc8dba7ae",
             "file": "src/app/button/button.component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: any;\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: ButtonType;\r\n}\r\n",
             "properties": [
                 {
                     "name": "fontSize",
@@ -330,16 +330,16 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "* {\r\n  width: 100vw;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.animes-online {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\napp-footer {\r\n  display: flex;\r\n  align-self: flex-end;\r\n}\r\n",
+                    "data": "* {\r\n  width: 100vw;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.animes-online {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\napp-footer {\r\n  display: flex;\r\n  align-self: flex-end;\r\n}\r\n\r\napp-line {\r\n  margin-top: 20px;\r\n}\r\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"animes-online\">\r\n<app-nav-bar></app-nav-bar>\r\n<router-outlet></router-outlet>\r\n<app-footer></app-footer>\r\n</div>\r\n"
+            "templateData": "<div class=\"animes-online\">\r\n    <app-nav-bar></app-nav-bar>\r\n    <router-outlet></router-outlet>\r\n    <app-line></app-line>\r\n    <app-footer></app-footer>\r\n</div>"
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-b69ad528ef7d3e38c4d809ff9cf4d926d9d90069a5484a795bd8e0e2b5a758d8e72dc6318094dc7b564b79a55bf77cc75fbb20ada9148d01482add2eeb433cb3",
+            "id": "component-ButtonComponent-06bd89807ede3d2823d4ad07b340b421ccd3f1b1f1aa6e10a67c7a6ca4f491b1adffc75334e34613181042861d2533e1b52c28d66f58300036be93cfc8dba7ae",
             "file": "src/app/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -361,7 +361,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 17,
-                    "type": "any",
+                    "type": "ButtonType",
                     "decorators": []
                 }
             ],
@@ -375,7 +375,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: any;\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\nexport interface ButtonType {\r\n  value: string;  \r\n  width?: number;\r\n  height?: number;\r\n  fontSize?: number;\r\n}\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input()\r\n  Button!: ButtonType;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -428,7 +428,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../variables.scss';\r\n\r\n.card {\r\n  position: relative;\r\n  height: auto;\r\n  width: 100%;\r\n\r\n  &-quality,\r\n  &-subtitle,\r\n  &-info {\r\n    position: absolute;\r\n  }\r\n\r\n  &-quality {\r\n    left: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-subtitle {\r\n    right: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-image {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 20px;\r\n  }\r\n\r\n  &-info {\r\n    display: flex;\r\n    align-items: flex-end;    \r\n    left: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 160px;\r\n    background: linear-gradient(180deg, rgba(7, 7, 7, 0) 0%, #070707 100%);\r\n    border-radius: 0 0 20px 20px;\r\n    font-weight: 500;\r\n  }\r\n  \r\n  &-title {\r\n    margin: 0 0 10px 10px ;\r\n    font-size: 15px;\r\n    line-height: 23px;\r\n    letter-spacing: 0.05em;\r\n    flex-wrap: wrap;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    &-title{\r\n      font-size: 20px;\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import '../variables.scss';\r\n\r\n.card {\r\n  position: relative;\r\n  height: auto;\r\n  width: 100%;\r\n  \r\n   &:hover, &:active {\r\n    cursor: pointer;\r\n  }\r\n\r\n  &-quality,\r\n  &-subtitle,\r\n  &-info {\r\n    position: absolute;\r\n  }\r\n\r\n  &-quality {\r\n    left: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-subtitle {\r\n    right: 20px;\r\n    top: 30px;\r\n  }\r\n\r\n  &-image {\r\n    width: 100%;\r\n    height: 100%;\r\n    border-radius: 20px;\r\n  }\r\n\r\n  &-info {\r\n    display: flex;\r\n    align-items: flex-end;    \r\n    left: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    height: 160px;\r\n    background: linear-gradient(180deg, rgba(7, 7, 7, 0) 0%, #070707 100%);\r\n    border-radius: 0 0 20px 20px;\r\n    font-weight: 500;\r\n  }\r\n  \r\n  &-title {\r\n    margin: 0 0 10px 10px ;\r\n    font-size: 15px;\r\n    line-height: 23px;\r\n    letter-spacing: 0.05em;\r\n    flex-wrap: wrap;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    &-title{\r\n      font-size: 20px;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./card.component.scss"
                 }
             ],
@@ -477,16 +477,16 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../variables.scss\";\r\n\r\n.details {\r\n  border-top: solid $primary 5px;\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  margin-bottom: 50px;\r\n  width: 100vw;\r\n\r\n  &-main {\r\n    margin: 0 20px;\r\n    height: 100%;\r\n  }\r\n\r\n  &-title {\r\n    text-align: center;\r\n    font-size: 30px;\r\n    margin: 20px 0;\r\n  }\r\n\r\n  &-label {\r\n    color: #949494;\r\n    font-weight: 500;\r\n    font-size: 20px;\r\n  }\r\n\r\n  &-sinopse {\r\n    font-size: 18px;\r\n  }\r\n\r\n  &-category {\r\n    margin-bottom: 20px;\r\n  }\r\n\r\n  &-aside-image{\r\n    margin-top: 10px;\r\n  }\r\n\r\n  &-image {\r\n    width: 300px;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    max-width: 1155px;\r\n    height: 430px;\r\n    flex-direction: row;\r\n    \r\n    &-title {\r\n      text-align: left;\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import \"../variables.scss\";\r\n\r\n.details {\r\n  display: flex;\r\n  align-items: center;\r\n  flex-direction: column;\r\n  margin-bottom: 50px;\r\n  width: 100vw;\r\n\r\n  &-main {\r\n    margin: 0 20px;\r\n    height: 100%;\r\n  }\r\n\r\n  &-title {\r\n    text-align: center;\r\n    font-size: 30px;\r\n    margin: 20px 0;\r\n  }\r\n\r\n  &-label {\r\n    color: #949494;\r\n    font-weight: 500;\r\n    font-size: 20px;\r\n  }\r\n\r\n  &-sinopse {\r\n    font-size: 18px;\r\n  }\r\n\r\n  &-category {\r\n    margin-bottom: 20px;\r\n  }\r\n\r\n  &-aside-image {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  &-image {\r\n    width: 300px;\r\n    height: 405px;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    max-width: 1155px;\r\n    height: 430px;\r\n    flex-direction: row;\r\n\r\n    &-title {\r\n      text-align: left;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./details.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<div class=\"details\">\r\n  <aside class=\"details-aside-image\">\r\n    <img\r\n      class=\"details-image\"\r\n      src={{this.data.image}}\r\n      alt=\"\"\r\n    />\r\n  </aside>\r\n  <div class=\"details-main\">\r\n    <h1 class=\"details-title\">\r\n      {{this.data.title}}\r\n    </h1>\r\n    <div class=\"details-category\">\r\n      <span class=\"details-label\">Gênero:</span>\r\n      {{this.data.category}}\r\n    </div>\r\n    <p class=\"details-sinopse\">\r\n      <span class=\"details-label\">Sinópse:</span>\r\n      {{this.data.sinopse}}\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<app-line></app-line>\r\n<div class=\"details\">\r\n  <aside class=\"details-aside-image\">\r\n    <img\r\n      class=\"details-image\"\r\n      src={{this.data.image}}\r\n      alt=\"\"\r\n    />\r\n  </aside>\r\n  <div class=\"details-main\">\r\n    <h1 class=\"details-title\">\r\n      {{this.data.title}}\r\n    </h1>\r\n    <div class=\"details-category\">\r\n      <span class=\"details-label\">Gênero:</span>\r\n      {{this.data.category}}\r\n    </div>\r\n    <p class=\"details-sinopse\">\r\n      <span class=\"details-label\">Sinópse:</span>\r\n      {{this.data.sinopse}}\r\n    </p>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "EpisodesComponent",
-            "id": "component-EpisodesComponent-9798ac5b90a8615f44fa5190f6368aa897d21b5f2d73cd1f67e006f119404762641a0397b25ae5b1a8d5547fb911e7db1557211058164bd159700ded0c0cd4b9",
+            "id": "component-EpisodesComponent-80130d3b3825b360731a35cfc479af1499eb2d0ae7123f2018f01ead4d1f94fea3de8d0422e37a11fff1463a8829f57f019f26555c75ff85d351f145d2384d4f",
             "file": "src/app/episodes/episodes.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -548,7 +548,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 43,
+                    "line": 44,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -569,7 +569,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 51,
+                    "line": 52,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -597,7 +597,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 39,
+                    "line": 40,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -631,11 +631,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\n@Component({\r\n  selector: 'app-episodes',\r\n  templateUrl: './episodes.component.html',\r\n  styleUrls: ['./episodes.component.scss'],\r\n})\r\nexport class EpisodesComponent implements OnInit {\r\n  @Output() changeEpisode = new EventEmitter<string>();\r\n  cards: CardType[] = [];\r\n  id!: number;\r\n\r\n  constructor(private route: ActivatedRoute) { }\r\n\r\n  ngOnInit(): void {\r\n    this.id = this.getId()\r\n    this.setEpisodes();\r\n  }\r\n\r\n  setEpisodes() {\r\n    const anime = this.findAnimeById(this.id);\r\n\r\n    anime.episodes\r\n      .map((ep: any) => {\r\n        this.cards.push({\r\n          id: anime.id,\r\n          title: anime.title,\r\n          cover: ep.image,\r\n          episode: ep.number,\r\n          videoUrl: ep.url,\r\n          movie: anime.movie,          \r\n        });\r\n      })\r\n  }\r\n\r\n  onEpisodeChange(url?: string) {\r\n    this.changeEpisode.emit(url);\r\n  }\r\n\r\n  findAnimeById(id: number) {\r\n    return animes\r\n      .filter((anime => anime.id === id))\r\n      .reduce((obj: any, item: any) => Object.assign(obj, {\r\n        ...item\r\n      }), {})\r\n  }\r\n\r\n  getId() {\r\n    const id = Number(this.route.snapshot.paramMap.get('id'));\r\n    return id\r\n  }\r\n}",
+            "sourceCode": "import { Component, EventEmitter, OnInit, Output } from '@angular/core';\r\nimport { ActivatedRoute } from '@angular/router';\r\nimport { CardType } from '../card/card.component';\r\nimport animes from '../animes.json';\r\n\r\n@Component({\r\n  selector: 'app-episodes',\r\n  templateUrl: './episodes.component.html',\r\n  styleUrls: ['./episodes.component.scss'],\r\n})\r\nexport class EpisodesComponent implements OnInit {\r\n  @Output() changeEpisode = new EventEmitter<string>();\r\n  cards: CardType[] = [];\r\n  id!: number;\r\n\r\n  constructor(private route: ActivatedRoute) { }\r\n\r\n  ngOnInit(): void {\r\n    this.id = this.getId()\r\n    this.setEpisodes();\r\n  }\r\n\r\n  setEpisodes() {\r\n    const anime = this.findAnimeById(this.id);\r\n\r\n    anime.episodes\r\n      .map((ep: any) => {\r\n        this.cards.push({\r\n          id: anime.id,\r\n          title: anime.title,\r\n          cover: ep.image,\r\n          episode: ep.number,\r\n          videoUrl: ep.url,\r\n          movie: anime.movie,\r\n          height: 175          \r\n        });\r\n      })\r\n  }\r\n\r\n  onEpisodeChange(url?: string) {\r\n    this.changeEpisode.emit(url);\r\n  }\r\n\r\n  findAnimeById(id: number) {\r\n    return animes\r\n      .filter((anime => anime.id === id))\r\n      .reduce((obj: any, item: any) => Object.assign(obj, {\r\n        ...item\r\n      }), {})\r\n  }\r\n\r\n  getId() {\r\n    const id = Number(this.route.snapshot.paramMap.get('id'));\r\n    return id\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../variables.scss\";\r\n.episodes {\r\n  border-top: red solid 5px;\r\n  margin-top: 50px;\r\n  max-width: 1155px;\r\n\r\n  &-cards {\r\n    overflow-x: scroll;\r\n    overflow-y: hidden;\r\n    white-space: nowrap;\r\n    height: 100%;\r\n    width: 100vw;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    \r\n    \r\n    &::-webkit-scrollbar {\r\n      width: 1em;\r\n      height: 3px;\r\n    }\r\n    \r\n    &::-webkit-scrollbar-track {\r\n      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    }\r\n    \r\n    &::-webkit-scrollbar-thumb {\r\n      background-color: $secondary;\r\n      border-radius: 20px;\r\n    }\r\n    \r\n    app-card {\r\n      margin-right: 10px;\r\n      width: 320px;\r\n      height: auto;\r\n      display: inline-block;\r\n    }\r\n    @media (min-width: $sm) {\r\n      flex-direction: row;\r\n      app-card {\r\n        height: 175px;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import \"../variables.scss\";\r\n.episodes {  \r\n  max-width: 1155px;\r\n\r\n  &-cards {\r\n    overflow-x: scroll;\r\n    overflow-y: hidden;\r\n    white-space: nowrap;\r\n    height: 100%;\r\n    width: 100vw;\r\n    margin-top: 10px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center;\r\n    \r\n    &::-webkit-scrollbar {\r\n      width: 1em;\r\n      height: 3px;\r\n    }\r\n    \r\n    &::-webkit-scrollbar-track {\r\n      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\r\n    }\r\n    \r\n    &::-webkit-scrollbar-thumb {\r\n      background-color: $secondary;\r\n      border-radius: 20px;\r\n    }\r\n    \r\n    app-card {\r\n      margin-right: 10px;\r\n      width: 320px;\r\n      height: auto;\r\n      display: inline-block;\r\n    }\r\n    @media (min-width: $sm) {\r\n      flex-direction: row;\r\n      app-card {\r\n        height: 175px;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./episodes.component.scss"
                 }
             ],
@@ -669,7 +669,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"episodes\">\r\n  <div class=\"episodes-cards horizontal-scroll-wrapper\">\r\n    <app-card\r\n      (ngModel)=\"card.episode\"\r\n      (click)=\"onEpisodeChange(card.videoUrl)\"\r\n      *ngFor=\"let card of cards\"\r\n      [Card]=\"card\"\r\n      routerLink=\"/play/{{ card.id }}\"\r\n    ></app-card>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"episodes\">\r\n  <app-line></app-line>\r\n  <div class=\"episodes-cards horizontal-scroll-wrapper\">\r\n    <app-card\r\n      (ngModel)=\"card.episode\"\r\n      (click)=\"onEpisodeChange(card.videoUrl)\"\r\n      *ngFor=\"let card of cards\"\r\n      [Card]=\"card\"\r\n      routerLink=\"/play/{{ card.id }}\"\r\n    ></app-card>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "FooterComponent",
@@ -704,12 +704,12 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../variables.scss';\r\n\r\n.footer {\r\n  margin-top: 25px;\r\n  width: 100vw;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: end;\r\n  align-items: center;\r\n  font-weight: 400;\r\n  border-top: solid 5px #dd0000;\r\n  height: 60px;\r\n  padding-bottom: 10px;\r\n\r\n  &-social-media {\r\n    display: flex;\r\n    align-items: center;    \r\n  }\r\n\r\n  &-link {\r\n    font-size: 12px;\r\n    margin-right: 5px;\r\n    display: flex;\r\n    align-items: center;\r\n\r\n    &:last-child {\r\n      margin-right: 0;\r\n    }\r\n  }\r\n\r\n  &-icon {\r\n    width: 25px;\r\n    margin-right: 5px;\r\n  }\r\n\r\n  &-attention {\r\n    font-size: 6px;\r\n    text-align: center;\r\n    margin-top: 10px;\r\n    font-weight: 500;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    margin-top: 50px;\r\n    height: 70px;\r\n\r\n    &-link {\r\n      font-size: 18px;\r\n      margin-right: 15px;\r\n    }\r\n\r\n    &-icon {\r\n      margin-right: 10px;\r\n    }\r\n\r\n    &-attention {\r\n      font-size: 12px;\r\n      margin: 15px 0;\r\n    }\r\n  }\r\n}\r\n",
+                    "data": "@import '../variables.scss';\r\n\r\n.footer {\r\n  width: 100vw;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: end;\r\n  align-items: center;\r\n  font-weight: 400;\r\n  height: 45px;\r\n  padding-bottom: 10px;\r\n\r\n  &-social-media {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n\r\n  &-link {\r\n    font-size: 12px;\r\n    margin-right: 5px;\r\n    display: flex;\r\n    align-items: center;\r\n\r\n    &:last-child {\r\n      margin-right: 0;\r\n    }\r\n  }\r\n\r\n  &-icon {\r\n    width: 25px;\r\n    margin-right: 5px;\r\n  }\r\n\r\n  &-attention {\r\n    font-size: 6px;\r\n    text-align: center;\r\n    margin-top: 10px;\r\n    font-weight: 500;\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    height: 70px;\r\n\r\n    &-link {\r\n      font-size: 18px;\r\n      margin-right: 15px;\r\n    }\r\n\r\n    &-icon {\r\n      margin-right: 10px;\r\n    }\r\n\r\n    &-attention {\r\n      font-size: 12px;\r\n      margin: 15px 0;\r\n    }\r\n  }\r\n}\r\n",
                     "styleUrl": "./footer.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": "<footer class=\"footer\">\r\n  <div class=\"footer-social-media\">\r\n    <a class=\"footer-link\" href=\"https://www.facebook.com/liara.2.0/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/facebook.svg\" alt=\"Facebook\" />\r\n      @Liara Programadora\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.linkedin.com/in/liara-programadora/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/linkedin.svg\" alt=\"Linkedin\" />\r\n      @Liara Duarte\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.youtube.com/c/LiaraProgramadora\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/youtube.svg\" alt=\"Youtube\" />\r\n      @Liara Programadora\r\n    </a>\r\n  </div>\r\n  <p class=\"footer-attention\">\r\n    Atenção: Este site não hospeda nenhum vídeo. Seu desenvolvimento é somente para estudo.\r\n  </p>\r\n</footer>\r\n"
+            "templateData": "<footer class=\"footer\">\r\n  <div class=\"footer-social-media\">\r\n    <a class=\"footer-link\" href=\"https://www.facebook.com/liara.2.0/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/facebook.svg\" alt=\"Facebook\" />\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.linkedin.com/in/liara-programadora/\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/linkedin.svg\" alt=\"Linkedin\" />\r\n    </a>\r\n    <a class=\"footer-link\" href=\"https://www.youtube.com/c/LiaraProgramadora\">\r\n      <img class=\"footer-icon\" src=\"../../assets/icons/youtube.svg\" alt=\"Youtube\" />\r\n    </a>\r\n  </div>\r\n  <p class=\"footer-attention\">\r\n    Atenção: Este site não hospeda nenhum vídeo.\r\n    <span>Seu desenvolvimento é somente para estudo.</span>\r\n  </p>\r\n</footer>"
         },
         {
             "name": "HomeComponent",
@@ -873,7 +873,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '../variables.scss';\r\n\r\n.home {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  width: fit-content;\r\n\r\n  .section-title {\r\n    align-self: flex-start;\r\n    font-size: 30px;\r\n    margin-bottom: 20px;\r\n    border-bottom: 4px solid #dd0000;\r\n    width: 100%;    \r\n  }\r\n\r\n  .highlight {\r\n    &-cards {\r\n      display: grid;\r\n      grid-template-columns: repeat(2, auto);\r\n      grid-gap: 10px;\r\n      justify-items: center;\r\n\r\n      & app-card {\r\n        grid-column: span 1;\r\n        grid-row: span 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .released {    \r\n    margin-top: 25px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    &-cards {\r\n      display: inline-grid;\r\n      grid-template-columns: repeat(1, 320px);\r\n      grid-template-rows: repeat(1, auto);\r\n      grid-gap: 20px;\r\n      justify-content: center;\r\n    }\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    .highlight {\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(7, auto);\r\n        grid-template-rows: repeat(2, auto);\r\n        grid-gap: 15px;\r\n        justify-content: center;\r\n    \r\n\r\n        & app-card:nth-child(1) {\r\n          grid-column: span 3;\r\n          grid-row: span 2;\r\n        }\r\n\r\n        & app-card {\r\n          grid-column: span 2;\r\n          grid-row: span 1;\r\n        }\r\n      }\r\n    }\r\n\r\n    .released {\r\n      margin-top: 50px;\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(3, 350px);\r\n        grid-gap: 25px;\r\n      }\r\n    }\r\n  }\r\n\r\n  @media (max-width: $lg ) and (min-width: $sm) {    \r\n    .released {\r\n      &-cards {\r\n        grid-template-columns: repeat(2, 350px);        \r\n      }\r\n    }\r\n  }\r\n}",
+                    "data": "@import '../variables.scss';\r\n\r\n.home {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  width: fit-content;\r\n\r\n  .section-title {\r\n    align-self: flex-start;\r\n    font-size: 30px;\r\n    margin-bottom: 10px;\r\n    width: 100%;    \r\n  }\r\n\r\n  .highlight {\r\n    &-cards {\r\n      display: grid;\r\n      grid-template-columns: repeat(2, auto);\r\n      grid-gap: 10px;\r\n      justify-items: center;\r\n\r\n      & app-card {\r\n        grid-column: span 1;\r\n        grid-row: span 1;\r\n      }\r\n    }\r\n  }\r\n\r\n  .released {    \r\n    margin-top: 25px;\r\n    display: flex;\r\n    flex-direction: column;\r\n    width: 100%;\r\n    &-cards {\r\n      display: inline-grid;\r\n      grid-template-columns: repeat(1, 320px);\r\n      grid-template-rows: repeat(1, auto);\r\n      grid-gap: 20px;\r\n      justify-content: center;\r\n    }\r\n  }\r\n\r\n  @media (min-width: $sm) {\r\n    .highlight {\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(7, auto);\r\n        grid-template-rows: repeat(2, auto);\r\n        grid-gap: 15px;\r\n        justify-content: center;\r\n    \r\n\r\n        & app-card:nth-child(1) {\r\n          grid-column: span 3;\r\n          grid-row: span 2;\r\n        }\r\n\r\n        & app-card {\r\n          grid-column: span 2;\r\n          grid-row: span 1;\r\n        }\r\n      }\r\n    }\r\n\r\n    .released {\r\n      margin-top: 50px;\r\n      width: 100%;\r\n      &-cards {\r\n        grid-template-columns: repeat(3, 350px);\r\n        grid-gap: 25px;\r\n      }\r\n    }\r\n  }\r\n\r\n  @media (max-width: $lg ) and (min-width: $sm) {    \r\n    .released {\r\n      &-cards {\r\n        grid-template-columns: repeat(2, 350px);        \r\n      }\r\n    }\r\n  }\r\n}",
                     "styleUrl": "./home.component.scss"
                 }
             ],
@@ -881,7 +881,69 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"home\">\r\n  <div class=\"highlight\">\r\n    <div class=\"section-title\">Destaques</div>\r\n    <div class=\"highlight-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of highlight\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"released\">\r\n    <div class=\"section-title\">Lançamentos</div>\r\n    <div class=\"released-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of cards\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"home\">\r\n  <div class=\"highlight\">\r\n    <div class=\"section-title\">Destaques</div>\r\n    <app-line></app-line>\r\n    <div class=\"highlight-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of highlight\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"released\">    \r\n    <div class=\"section-title\">Lançamentos</div>\r\n    <app-line></app-line>\r\n    <div class=\"released-cards\">\r\n      <app-card\r\n        *ngFor=\"let card of cards\"\r\n        [Card]=\"card\"\r\n        routerLink=\"/play/{{ card.id }}\"\r\n      ></app-card>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "LineComponent",
+            "id": "component-LineComponent-594ecc710d9f7365b6e554220f8ae9480709881e892c6d49fecdb57d77d3a42942ae51faa452968a48770c5d9de44bd26f92edbb045ee56b69d85e077cd5cb63",
+            "file": "src/app/line/line.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-line",
+            "styleUrls": [
+                "./line.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./line.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-line',\r\n  templateUrl: './line.component.html',\r\n  styleUrls: ['./line.component.scss']\r\n})\r\nexport class LineComponent implements OnInit {\r\n\r\n  constructor() { }\r\n\r\n  ngOnInit(): void {\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "hr{\r\n    border: solid #dd0000 3px;\r\n    width: 100%;\r\n}",
+                    "styleUrl": "./line.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<hr/>\r\n"
         },
         {
             "name": "ListComponent",
@@ -956,7 +1018,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<div class=\"list\">\r\n  <div class=\"list-cards\">\r\n    <app-card *ngFor=\"let card of cards\" [Card]=\"card\" routerLink=\"play/{{card.id}}\"></app-card>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"list\">\r\n  <app-filter></app-filter>\r\n  <div class=\"list-cards\">\r\n    <app-card *ngFor=\"let card of cards\" [Card]=\"card\" routerLink=\"play/{{card.id}}\"></app-card>\r\n  </div>\r\n</div>\r\n"
         },
         {
             "name": "NavBarComponent",
@@ -1176,13 +1238,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-96e792ace461ea43524592ef8bc1e1370a5df30baed0378c63781f60c219f473fe53ab992e5597b2cfccde301f3d62c3cf0032247f27ed034815311900767c98",
+            "id": "module-AppModule-53e7e8231b7f7958911782f282aa053fb7b7055c58d34bb8f40b715b96a613be721b051af965bc2260572f1bbf1920c98a921d88d9d431e2b8ce67da8de40332",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { HttpClientModule } from '@angular/common/http';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { CardComponent } from './card/card.component';\r\nimport { FooterComponent } from './footer/footer.component';\r\nimport { PlayComponent } from './play/play.component';\r\nimport { HomeComponent } from './home/home.component';\r\nimport { ListComponent } from './list/list.component';\r\nimport { SafeUrlPipe } from './safe-url.pipe';\r\nimport { EpisodesComponent } from './episodes/episodes.component';\r\nimport { DetailsComponent } from './details/details.component';\r\n\r\nconst routes: Routes = [\r\n  { path: 'home', component: HomeComponent },\r\n  { path: 'list', component: ListComponent },\r\n  { path: 'list/play/:id', component: PlayComponent },\r\n  { path: 'play/:id', component: PlayComponent },\r\n  { path: 'episodes/:id', component: EpisodesComponent },\r\n  { path: '', redirectTo: '/home', pathMatch: 'full' },\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NavBarComponent,\r\n    ButtonComponent,\r\n    CardComponent,\r\n    FooterComponent,\r\n    PlayComponent,\r\n    HomeComponent,\r\n    ListComponent,\r\n    SafeUrlPipe,\r\n    EpisodesComponent,\r\n    DetailsComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule, \r\n    RouterModule.forRoot(routes), \r\n    HttpClientModule],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { HttpClientModule } from '@angular/common/http';\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { NavBarComponent } from './nav-bar/nav-bar.component';\r\nimport { ButtonComponent } from './button/button.component';\r\nimport { CardComponent } from './card/card.component';\r\nimport { FooterComponent } from './footer/footer.component';\r\nimport { PlayComponent } from './play/play.component';\r\nimport { HomeComponent } from './home/home.component';\r\nimport { ListComponent } from './list/list.component';\r\nimport { SafeUrlPipe } from './safe-url.pipe';\r\nimport { EpisodesComponent } from './episodes/episodes.component';\r\nimport { DetailsComponent } from './details/details.component';\r\nimport { LineComponent } from './line/line.component';\r\n\r\nconst routes: Routes = [\r\n  { path: 'home', component: HomeComponent },\r\n  { path: 'list', component: ListComponent },\r\n  { path: 'list/play/:id', component: PlayComponent },\r\n  { path: 'play/:id', component: PlayComponent },\r\n  { path: 'episodes/:id', component: EpisodesComponent },\r\n  { path: '', redirectTo: '/home', pathMatch: 'full' },\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NavBarComponent,\r\n    ButtonComponent,\r\n    CardComponent,\r\n    FooterComponent,\r\n    PlayComponent,\r\n    HomeComponent,\r\n    ListComponent,\r\n    SafeUrlPipe,\r\n    EpisodesComponent,\r\n    DetailsComponent,\r\n    LineComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    RouterModule.forRoot(routes),\r\n    HttpClientModule],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1211,6 +1273,9 @@
                         },
                         {
                             "name": "HomeComponent"
+                        },
+                        {
+                            "name": "LineComponent"
                         },
                         {
                             "name": "ListComponent"
@@ -1305,21 +1370,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\r\n  production: true\r\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\r\n  production: false\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: true\r\n}"
             },
             {
                 "name": "require",
@@ -1444,18 +1509,6 @@
                     "defaultValue": "() => ({\r\n  })"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\r\n  production: true\r\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1466,6 +1519,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\r\n  production: false\r\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: true\r\n}"
                 }
             ]
         },
@@ -1654,6 +1719,15 @@
                 "type": "interface",
                 "linktype": "interface",
                 "name": "SizeType",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/line/line.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LineComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"

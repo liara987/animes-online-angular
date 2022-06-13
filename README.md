@@ -6,6 +6,9 @@ Essa aplicação é uma página responsiva que lista alguns dos meus animes favo
 
 🚀 **Veja no seu navegador clickando [aqui](https://animes-online-angular.vercel.app/home)**
 
+## Documentação de componentes
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://62a685c6e5e4532f5a59abc7-ijbxqldmgt.chromatic.com/?path=/story/buttoncomponent--default)
+
 ## Testes
 ![testes](https://github.com/liara987/animes-online-angular/blob/main/screenshots/Screenshot%20at%202022-05-10%2000-13-05.png)
 
