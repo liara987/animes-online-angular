@@ -1,3 +1,5 @@
+## Multilanguage README Pattern
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/jonatasemidio/multilanguage-readme-pattern/blob/master/README.md)
 # ![Logo](https://animes-online-angular.vercel.app/assets/icons/logo.svg) AnimeOnline
 Essa aplicação é uma página responsiva que lista alguns dos meus animes favoritos. Os videos estão hospedados no Mega e são indesidos na aplicação por embed. O intuito dessa aplicação é colocar em prática e aprimorar meus conhecimentos em front-end, as tecnologias foram **[Typescript](https://www.typescriptlang.org/)** como linguágem principal,  **[Angular](https://angular.io/)** como framework front-end, **[Sass](https://sass-lang.com/)** de pré-processador do css e testes unitários com boa cobertura usando **[Jasmine](https://jasmine.github.io/index.html)** e **[Karma](https://karma-runner.github.io/6.3/index.html)**, o deploy foi feito na plataforma **[Vercel](https://vercel.com/)**, que realiza de forma automática toda a parte de CI/CD da aplicação.
 
