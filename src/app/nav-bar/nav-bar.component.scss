@@ -1,23 +1,32 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .nav-bar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
-  margin: 15px 15px 30px;
+  margin: 0;
+  padding: 27px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
 
   &-logo {
     margin-right: 5px;
     height: 100%;
   }
-  
-  &-home{
+
+  &-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  &-home {
+    display: flex;
+    align-items: center;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 5px;
   }
 
   &-link {
@@ -25,35 +34,19 @@
     letter-spacing: 0.05em;
     margin-right: 15px;
 
-    &:last-child {
-      margin-right: 0;
-    }
-
     &:hover:not(.logo) {
       border-bottom: 1px solid $primary;
       box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
     }
   }
 
-  &-title,
-  &-subtitle {
+  &-title {
     margin: 0;
     font-family: "Aubrey", cursive;
-  }
-
-  &-title {
     font-size: 24px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &-subtitle {
-    font-size: 10px;    
   }
 
   @media (min-width: $sm) {
-    justify-content: center;
-    margin: 30px;
     height: 48px;
 
     &-logo {
@@ -73,12 +66,12 @@
       }
     }
 
-    &-title {
-      font-size: 20px;
+    &-home{
+      left: 10%;
     }
 
-    &-subtitle {
-      font-size: 10px;
+    &-title {
+      font-size: 34px;
     }
   }
 }
