@@ -1,16 +1,32 @@
-@import '../variables.scss';
+@import "../variables.scss";
 
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: fit-content;
+  margin-top: 15px;
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("../../assets/background/home.jpg") no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.3;
+    width: 100%;
+    height: 635px;
+  }
 
   .section-title {
     align-self: flex-start;
     font-size: 30px;
     margin-bottom: 10px;
-    width: 100%;    
+    width: 100%;
+    font-weight: 700;
   }
 
   .highlight {
@@ -27,7 +43,7 @@
     }
   }
 
-  .released {    
+  .released {
     margin-top: 25px;
     display: flex;
     flex-direction: column;
@@ -42,6 +58,12 @@
   }
 
   @media (min-width: $sm) {
+    margin-top: 30px;
+
+    .bg {
+      height: 770px;
+    }
+
     .highlight {
       width: 100%;
       &-cards {
@@ -49,7 +71,6 @@
         grid-template-rows: repeat(2, auto);
         grid-gap: 15px;
         justify-content: center;
-    
 
         & app-card:nth-child(1) {
           grid-column: span 3;
@@ -73,10 +94,10 @@
     }
   }
 
-  @media (max-width: $lg ) and (min-width: $sm) {    
+  @media (max-width: $lg) and (min-width: $sm) {
     .released {
       &-cards {
-        grid-template-columns: repeat(2, 350px);        
+        grid-template-columns: repeat(2, 350px);
       }
     }
   }
