@@ -24,7 +24,7 @@
     <p class="card-title">
       {{ Card.title }}
       <span class="card-episode" *ngIf="!Card.movie && this.Card.episode">
-        {{ "Episódio " + this.Card.episode }}
+        - {{ this.Card.episode }}
       </span>
     </p>
   </div>
