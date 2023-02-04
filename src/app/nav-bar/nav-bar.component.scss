@@ -41,9 +41,8 @@
   }
 
   &-title {
-    margin: 0;
-    font-family: "Aubrey", cursive;
-    font-size: 24px;
+    margin: 0;    
+    display: none;
   }
 
   @media (min-width: $sm) {
@@ -71,7 +70,9 @@
     }
 
     &-title {
+      display: unset;
       font-size: 34px;
+      font-weight: 300;
     }
   }
 }
