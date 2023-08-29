@@ -2,77 +2,65 @@
 
 .nav-bar {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
   position: relative;
   margin: 0;
-  padding: 27px 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-weight: 600;
+  height: 3.75rem;
+  background-color: rgb(35, 37, 43);
 
   &-logo {
-    margin-right: 5px;
     height: 100%;
+    content: url("../../assets/icons/logo.svg");
+    padding: 1rem;
   }
 
   &-wrapper {
     display: flex;
     align-items: center;
-    margin-right: 15px;
   }
 
   &-home {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 5px;
   }
 
   &-link {
-    font-size: 20px;
-    letter-spacing: 0.05em;
-    margin-right: 15px;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0.05rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:hover:not(.logo) {
-      border-bottom: 1px solid $primary;
-      box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
+      background-color: rgb(20, 21, 25);
+      color: rgb(255, 255, 255);
     }
-  }
-
-  &-title {
-    margin: 0;    
-    display: none;
   }
 
   @media (min-width: $sm) {
-    height: 48px;
-
     &-logo {
-      margin-right: 10px;
-      width: 32px;
+      margin-left: 5rem;
+      content: url("../../assets/icons/animes.logo.svg");
     }
 
     &-link {
-      font-size: 25px;
+      font-size: 1.3rem;
+      padding: 1rem;
       letter-spacing: 0.05em;
-      margin-right: 30px;
+      margin-right: 0;
       cursor: pointer;
 
       &:hover:not(.logo) {
-        border-bottom: 1px solid $primary;
-        box-shadow: 0px 4px 4px rgba(189, 0, 255, 0.32);
+        background-color: rgb(20, 21, 25);
+        color: rgb(255, 255, 255);
       }
     }
 
-    &-home{
+    &-home {
       left: 10%;
-    }
-
-    &-title {
-      display: unset;
-      font-size: 34px;
-      font-weight: 300;
     }
   }
 }
