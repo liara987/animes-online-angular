@@ -1,11 +1,9 @@
-// =========================
-// Carousel
-// =========================
+@import "../variables.scss";
 
-.carousel {
+.carousel {  
   position: relative;
-  height: 30rem;
-  width: 50rem;
+  height: 10rem;
+  width: 20rem;
   overflow: hidden;
   border-radius: 0.5em;
 }
@@ -38,10 +36,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0.5em;
+  padding: 0.2em;
   color: white;
   font-weight: bold;
-  font-size: 3em;
+  font-size: 2em;
   user-select: none;
   height: 100%;
   opacity: 80%;
@@ -51,7 +49,7 @@
   &:hover {
     background-color: rgba($color: #000000, $alpha: 0.3);
   }
-  
+
   &:hover,
   &:focus {
     opacity: 1;
@@ -71,13 +69,30 @@
   display: block;
   border-left: 0.1em solid white;
   border-bottom: 0.1em solid white;
-  width: 0.5em;
-  height: 0.5em;
+  width: 0.3em;
+  height: 0.3em;
 
   &.left {
     transform: rotate(45deg);
   }
   &.right {
     transform: rotate(225deg);
+  }
+}
+
+@media (min-width: $sm) {
+  .carousel {
+    height: 30rem;
+    width: 50rem;
+  }
+
+  .control {
+    padding: 0.5em;
+    font-size: 3em;
+  }
+
+  .arrow {
+    width: 0.5em;
+    height: 0.5em;
   }
 }

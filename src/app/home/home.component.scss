@@ -6,7 +6,6 @@
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding: 2rem;    
   }
   .section-title {
     align-self: flex-start;
@@ -48,8 +47,8 @@
   @media (min-width: $sm) {
     margin-top: 30px;
 
-    .bg {
-      height: 850px;
+    .container {
+      padding: 2rem;
     }
 
     .highlight {
