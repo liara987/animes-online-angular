@@ -18,6 +18,14 @@ interface SizeType {
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  public slides = [
+    { src: "https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/e10063f7-f399-4dfb-be2e-5af13aefbc9b.webp" },
+    { src: "https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/d416acb5-c6c0-41c6-9bb7-c1fa9f53961a.webp" },
+    { src: "https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/e97016e0-ada6-4ccc-8ace-82b2e783d454.webp" },
+    { src: "https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/d23108ca-f0f0-48d0-9a7d-454592c5fa22.webp" },
+    { src: "https://static.crunchyroll.com/fms/landscape_poster/960x540/100/png/a81aabd2-f610-4fe8-bfe3-1ee576aab3c8.webp" },
+  ];
+
   tabletSize: SizeType = {
     firstItem: {
       width: 300,

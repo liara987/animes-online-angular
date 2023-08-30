@@ -1,6 +1,13 @@
 @import "../variables.scss";
 
 .home {
+  .container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding: 2rem;    
+  }
   .section-title {
     align-self: flex-start;
     font-size: 30px;

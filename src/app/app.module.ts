@@ -15,6 +15,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
 import { EpisodesComponent } from './episodes/episodes.component';
 import { DetailsComponent } from './details/details.component';
 import { LineComponent } from './line/line.component';
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
     EpisodesComponent,
     DetailsComponent,
     LineComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
