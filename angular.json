@@ -121,5 +121,8 @@
       }
     }
   },
-  "defaultProject": "anime-online"
+  "defaultProject": "anime-online",
+  "cli": {
+    "analytics": false
+  }
 }
