@@ -18,6 +18,3 @@ This application is a responsive page that lists some of my favorite anime. The 
 
 ## 🗣️ Get in touch
 [![LinkedIn URL](https://github.com/liara987/liara987/blob/main/icons/social%20media/linkedin.svg)](https://www.linkedin.com/in/liara-programadora)
-
-
-[![YouTube](https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white)](https://www.youtube.com/channel/UCkjlpKaG0SUeCQso6Lt2gbg)
